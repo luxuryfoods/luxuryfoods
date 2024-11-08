@@ -211,6 +211,7 @@ section#news-2 {
 .order-popup__name {
 	font-weight: bold;
 	line-height: 1.2;
+	margin-right: 5px;
 }
 .order-popup__phone {
 	font-size: 12px;
@@ -222,7 +223,7 @@ section#news-2 {
 }
 .order-popup__close {
 	position: absolute;
-	top: 0;
+	top: 4px;
 	right: 0;
 	background: none;
 	color: #FFF;
