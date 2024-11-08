@@ -39,9 +39,9 @@
                 $('.order-popup').addClass('order-popup--visible');
 				
 				// Ẩn popup sau 10 giây
-                setTimeout(function() {
-                    $('.order-popup').removeClass('order-popup--visible');
-				}, 10000);
+                //setTimeout(function() {
+                //    $('.order-popup').removeClass('order-popup--visible');
+				//}, 10000);
             }
 			
 			// Ẩn popup khi click Close
