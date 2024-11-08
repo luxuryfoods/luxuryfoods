@@ -201,7 +201,6 @@ section#news-2 {
 }
 .order-popup__content {
 	width: calc( var(--width) - var(--width-image) );
-	position: relative;
 }
 .order-popup__info {
 	margin: 10px 12px;
@@ -212,11 +211,13 @@ section#news-2 {
 	font-weight: bold;
 	line-height: 1.2;
 	margin-right: 5px;
+	display: block;
 }
 .order-popup__phone {
 	font-size: 12px;
 	line-height: 1;
 	color: #f0ebeb;
+	display: block;
 }
 .order-popup__details {
 	font-size: 12px;
@@ -224,7 +225,7 @@ section#news-2 {
 }
 .order-popup__close {
 	position: absolute;
-	top: 4px;
+	top: 0;
 	right: 0;
 	background: none;
 	color: #FFF;
