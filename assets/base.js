@@ -30,7 +30,7 @@
                 var currentTime = new Date().toLocaleTimeString();
 
                 $('.order-popup__image').attr('src', product.image);
-                $('.order-popup__name').text(firstName + " " + lastName + " đã mua " + product.name);
+                $('.order-popup__name').text(firstName + " " + lastName + " đã đặt mua " + product.name);
                 $('.order-popup__phone').text("Ở " + address + " - " + phone + "***");
                 //$('.order-popup__details').text("Tại " + address + " vào lúc " + currentTime);
 				$('.order-popup__details').text(time + " trước");
