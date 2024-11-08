@@ -2,7 +2,7 @@
             var firstNames = ["Nguyễn", "Trần", "Lê", "Phạm", "Hoàng", "Phan", "Vũ", "Đặng", "Bùi", "Đỗ"];
             var lastNames = ["An", "Bình", "Cường", "Dung", "Em", "Phương", "Quỳnh", "Sơn", "Thảo", "Uyên"];
             var phones = ["090", "091", "092", "093", "094", "095", "096", "097", "098", "099"];
-            //var addresses = ["Hà Nội", "TP.HCM", "Đà Nẵng", "Thanh Hóa", "Hoằng Hóa", "Nghi Sơn", "Sầm Sơn", "Nghệ An", "Thọ Xuân", "Vũng Tàu"];
+            var addresses = ["Hà Nội", "TP.HCM", "Đà Nẵng", "Thanh Hóa", "Hoằng Hóa", "Nghi Sơn", "Sầm Sơn", "Nghệ An", "Thọ Xuân", "Vũng Tàu"];
 			var times = ["1 phút", "3 phút", "5 phút", "10 phút", "16 phút", "1 giờ", "2 giờ", "3 giờ", "22 phút", "35 phút"];
             var products = [
                 { name: "Thị Bò Mỹ", image: "https://d3a0f2zusjbf7r.cloudfront.net/400/f14e5fdb-24cc-4483-9b36-6e53e0d7a81f.png", link: "https://luxuryfoods.vn/vi/collection/product/thit-bo-my-c40128?collectionPage=%5B1%5D" },
@@ -24,16 +24,16 @@
                 var firstName = getRandomElement(firstNames);
                 var lastName = getRandomElement(lastNames);
                 var phone = generatePhoneNumber();
-                //var address = getRandomElement(addresses);
+                var address = getRandomElement(addresses);
 				var time = getRandomElement(times);
                 var product = getRandomElement(products);
                 var currentTime = new Date().toLocaleTimeString();
 
                 $('.order-popup__image').attr('src', product.image);
                 $('.order-popup__name').text(firstName + " " + lastName + " đã mua " + product.name);
-                $('.order-popup__phone').text("SĐT: " + phone + "***");
+                $('.order-popup__phone').text("Ở " + address + " - " + phone + "***");
                 //$('.order-popup__details').text("Tại " + address + " vào lúc " + currentTime);
-				$('.order-popup__details').text(time + "trước");
+				$('.order-popup__details').text(time + " trước");
                 $('.order-popup__link').attr('href', product.link);
 
                 $('.order-popup').addClass('order-popup--visible');

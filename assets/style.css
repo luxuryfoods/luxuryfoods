@@ -213,6 +213,7 @@ section#news-2 {
 	line-height: 1.2;
 }
 .order-popup__phone {
+	font-size: 12px;
 	line-height: 1;
 }
 .order-popup__details {
