@@ -103,7 +103,7 @@ section[class*="product"] .collection .item .content .price {
 .product-service-multi-collection-default .multi-collection-items .multi-coll-item--hover picture,
 .collection .item .image {
 	padding-top: 100%;
-	height: !important;
+	height: auto !important;
 }
 .product-service-multi-collection-default .multi-collection-items .multi-coll-item--hover picture img,
 .collection .item .image img {
