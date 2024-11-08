@@ -38,7 +38,7 @@ section[id*="tm-menu-slider-layout-1"] {
 	}
 	.tm-menu-slider-layout-1 .menu .menu-list,
 	.tm-menu-slider-layout-1 .slider .slider-detail-img ul li a div img {
-		height: var(--height);
+		height: var(--height) !important;
 	}
 	.tm-menu-slider-layout-1 .banners .banner {
 		height: calc(var(--height) / 2 - var(--gap));
@@ -91,7 +91,7 @@ section[class*="product"] .collection .item .content .price {
 .product-service-multi-collection-default .multi-collection-items .multi-coll-item--hover picture,
 .collection .item .image {
 	padding-top: 100%;
-	height: auto;
+	height: !important;
 }
 .product-service-multi-collection-default .multi-collection-items .multi-coll-item--hover picture img,
 .collection .item .image img {
