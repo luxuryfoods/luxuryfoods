@@ -176,7 +176,7 @@ section#news-2 {
 	bottom: 20px;
 	background-color: var(--primary);
 	color: #FFF;
-	border: 1px solid #ddd;
+	border: 1px solid var(--primary);
 	border-radius: 5px;
 	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 	width: var(--width);
@@ -217,13 +217,14 @@ section#news-2 {
 }
 .order-popup__details {
 	font-size: 12px;
-	color: #666;
+	color: #f1bebe;
 }
 .order-popup__close {
 	position: absolute;
 	top: 0;
 	right: 0;
 	background: none;
+	color: #FFF;
 	border: none;
 	font-size: 20px;
 	cursor: pointer;

@@ -2,7 +2,7 @@
             var firstNames = ["Nguyễn", "Trần", "Lê", "Phạm", "Hoàng", "Phan", "Vũ", "Đặng", "Bùi", "Đỗ"];
             var lastNames = ["An", "Bình", "Cường", "Dung", "Em", "Phương", "Quỳnh", "Sơn", "Thảo", "Uyên"];
             var phones = ["090", "091", "092", "093", "094", "095", "096", "097", "098", "099"];
-            var addresses = ["Hà Nội", "TP.HCM", "Đà Nẵng", "Hải Phòng", "Cần Thơ", "Biên Hòa", "Nha Trang", "Huế", "Quy Nhơn", "Vũng Tàu"];
+            var addresses = ["Hà Nội", "TP.HCM", "Đà Nẵng", "Thanh Hóa", "Hoằng Hóa", "Nghi Sơn", "Sầm Sơn", "Nghệ An", "Thọ Xuân", "Vũng Tàu"];
             var products = [
                 { name: "Thị Bò Mỹ", image: "https://d3a0f2zusjbf7r.cloudfront.net/400/f14e5fdb-24cc-4483-9b36-6e53e0d7a81f.png", link: "https://luxuryfoods.vn/vi/collection/product/thit-bo-my-c40128?collectionPage=%5B1%5D" },
                 { name: "Thị Bò Úc", image: "https://d3a0f2zusjbf7r.cloudfront.net/400/ff5e00b1-aa8f-4171-93d4-462d0a376960.png", link: "https://luxuryfoods.vn/vi/collection/product/thit-bo-uc-c40133?collectionPage=%5B1%5D" },
@@ -38,7 +38,7 @@
 				// Ẩn popup sau 10 giây
                 setTimeout(function() {
                     $('.order-popup').removeClass('order-popup--visible');
-				}, 5000);
+				}, 10000);
             }
 			
 			// Ẩn popup khi click Close
@@ -49,5 +49,5 @@
             });
 			
 			// Gọi hàm hiển thị đơn hàng mỗi 20 giây
-            setInterval(showRandomOrder, 10000);
+            setInterval(showRandomOrder, 20000);
         });
