@@ -174,7 +174,8 @@ section#news-2 {
 	position: fixed;
 	left: calc( var(--width) * -1 );
 	bottom: 20px;
-	background-color: #f0f0f0;
+	background-color: var(--primary);
+	color: #FFF;
 	border: 1px solid #ddd;
 	border-radius: 5px;
 	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -184,6 +185,7 @@ section#news-2 {
 	align-items: center;
 	overflow: hidden;
 	transition: left 0.5s ease-in-out;
+	z-index: 99999;
 }
 .order-popup--visible {
 	left: 20px;

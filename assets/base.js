@@ -4,11 +4,11 @@
             var phones = ["090", "091", "092", "093", "094", "095", "096", "097", "098", "099"];
             var addresses = ["Hà Nội", "TP.HCM", "Đà Nẵng", "Hải Phòng", "Cần Thơ", "Biên Hòa", "Nha Trang", "Huế", "Quy Nhơn", "Vũng Tàu"];
             var products = [
-                { name: "Áo thun nam", image: "https://placehold.co/200x200", link: "https://example.com/ao-thun-nam" },
-                { name: "Váy hoa nữ", image: "https://placehold.co/200x200", link: "https://example.com/vay-hoa-nu" },
-                { name: "Giày thể thao", image: "https://placehold.co/200x200", link: "https://example.com/giay-the-thao" },
-                { name: "Túi xách da", image: "https://placehold.co/200x200", link: "https://example.com/tui-xach-da" },
-                { name: "Đồng hồ thông minh", image: "https://placehold.co/200x200", link: "https://example.com/dong-ho-thong-minh" }
+                { name: "Thị Bò Mỹ", image: "https://d3a0f2zusjbf7r.cloudfront.net/400/f14e5fdb-24cc-4483-9b36-6e53e0d7a81f.png", link: "https://luxuryfoods.vn/vi/collection/product/thit-bo-my-c40128?collectionPage=%5B1%5D" },
+                { name: "Thị Bò Úc", image: "https://d3a0f2zusjbf7r.cloudfront.net/400/ff5e00b1-aa8f-4171-93d4-462d0a376960.png", link: "https://luxuryfoods.vn/vi/collection/product/thit-bo-uc-c40133?collectionPage=%5B1%5D" },
+                { name: "Bơ, sữa chua, phô mai", image: "https://p16-oec-va.ibyteimg.com/tos-maliva-i-o3syd03w52-us/ad48761b4ed942a2962982ffcee1dd25~tplv-o3syd03w52-origin-jpeg.jpeg", link: "https://luxuryfoods.vn/vi/collection/product/bo-sua-va-pho-mai-c39868?collectionPage=%5B1%5D" },
+                { name: "Hải sản nhập khẩu", image: "https://d3a0f2zusjbf7r.cloudfront.net/400/3f94e301-002d-4e8f-b059-94ca9fac578f.png", link: "https://luxuryfoods.vn/vi/collection/product/hai-san-nhap-khau-c39586?collectionPage=%5B1%5D" },
+                { name: "Đồ khô & Gia vị", image: "https://d3a0f2zusjbf7r.cloudfront.net/452/96fea923-7b79-416c-9fba-107eed8a11e2.png", link: "https://luxuryfoods.vn/vi/collection/product/do-kho-va-gia-vi-c39824" }
             ];
 
             function getRandomElement(arr) {
@@ -34,7 +34,8 @@
                 $('.order-popup__link').attr('href', product.link);
 
                 $('.order-popup').addClass('order-popup--visible');
-								// Ẩn popup sau 5 giây
+				
+				// Ẩn popup sau 10 giây
                 setTimeout(function() {
                     $('.order-popup').removeClass('order-popup--visible');
 				}, 5000);
@@ -47,6 +48,6 @@
                 $('.order-popup').removeClass('order-popup--visible');
             });
 			
-			// Gọi hàm hiển thị đơn hàng mỗi 10 giây
+			// Gọi hàm hiển thị đơn hàng mỗi 20 giây
             setInterval(showRandomOrder, 10000);
         });
