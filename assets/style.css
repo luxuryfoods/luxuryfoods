@@ -51,10 +51,19 @@ section[id*="tm-menu-slider-layout-1"] {
 	margin: auto;
 }
 @media only screen and (max-width: 767px) {
-	.promotion-banner-10 .img-fluid {
-    width: 50%;
+.promotion-banner-10>.content>a {
+    width: 100%;
     height: 120px;
-    object-fit: cover;
+    overflow: hidden;
+    position: relative;
+}
+.promotion-banner-10 .img-fluid {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translate(0, -50%);
+    height: auto;
+    width: 200%;
 }
 }
 /* Product */
