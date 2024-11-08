@@ -166,10 +166,10 @@ section#news-2 {
 }
 @media only screen and (max-width: 767px) {
 .introduction-4__wrapper {
-	padding: 30px 0;
+	padding: 30px 0!important;
 }
 .introduction-4__wrapper .introduction-4__img-container {
-    grid-gap: 0;
+    grid-gap: 0!important;
 }
 }
 .introduction-4__btn {

@@ -54,6 +54,6 @@
                 $('.order-popup').removeClass('order-popup--visible');
             });
 			
-			// Gọi hàm hiển thị đơn hàng mỗi 20 giây
-            setInterval(showRandomOrder, 15000);
+			// Gọi hàm hiển thị đơn hàng mỗi 7 giây
+            setInterval(showRandomOrder, 7000);
         });
