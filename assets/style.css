@@ -43,8 +43,8 @@ section[id*="tm-menu-slider-layout-1"] {
 		height: var(--height) !important;
 	}
 	.tm-menu-slider-layout-1 .banners .banner {
-		height: calc(var(--height) / 2 - var(--gap));
-		padding-bottom: 0;
+		height: calc(var(--height) / 2 - var(--gap)) !important;
+		padding-bottom: 0 !important;
 		margin-bottom: calc(var(--gap) * 2);
 	}
 }
