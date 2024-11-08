@@ -183,7 +183,7 @@ section#news-2 {
 	display: none;
 }
 .Testimonial-HPhung4 .item .card .content {
-	box-shadow: unset;
+	box-shadow: unset !important;
 	border: 1px solid var(--border);
 }
 
