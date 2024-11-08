@@ -210,12 +210,12 @@ section#news-2 {
 .order-popup__name {
 	font-weight: bold;
 	line-height: 1.2;
-	margin-right: 5px;
+	margin: 0 5px 6px 0;
 	display: block;
 }
 .order-popup__phone {
 	font-size: 12px;
-	line-height: 1;
+	line-height: 1.2;
 	color: #f0ebeb;
 	display: block;
 }
