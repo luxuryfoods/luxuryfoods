@@ -10,6 +10,9 @@
                 { name: "Bơ, sữa chua, phô mai", image: "https://p16-oec-va.ibyteimg.com/tos-maliva-i-o3syd03w52-us/ad48761b4ed942a2962982ffcee1dd25~tplv-o3syd03w52-origin-jpeg.jpeg", link: "https://luxuryfoods.vn/vi/collection/product/bo-sua-va-pho-mai-c39868?collectionPage=%5B1%5D" },
                 { name: "Hải sản nhập khẩu", image: "https://d3a0f2zusjbf7r.cloudfront.net/400/3f94e301-002d-4e8f-b059-94ca9fac578f.png", link: "https://luxuryfoods.vn/vi/collection/product/hai-san-nhap-khau-c39586?collectionPage=%5B1%5D" },
                 { name: "Đồ khô & Gia vị", image: "https://d3a0f2zusjbf7r.cloudfront.net/452/96fea923-7b79-416c-9fba-107eed8a11e2.png", link: "https://luxuryfoods.vn/vi/collection/product/do-kho-va-gia-vi-c39824" }
+				{ name: "Đầu thăn ngoại bò Mỹ ", image: "https://p16-oec-va.ibyteimg.com/tos-maliva-i-o3syd03w52-us/4116cb89c9a5467b80067fbfbf31eec8~tplv-o3syd03w52-origin-jpeg.jpeg", link: "https://luxuryfoods.vn/product/dau-than-ngoai-bo-my-1kg-p1126177" }
+				{ name: "Bào ngư viền xanh Tacmania", image: "https://d3a0f2zusjbf7r.cloudfront.net/532/c39dd245-26c1-4fdd-bcb0-32fd27d83115.png", link: "https://luxuryfoods.vn/product/bao-ngu-vien-xanh-tacmania-dl-p1169288" }
+				{ name: "Bắp bò Úc", image: "https://d3a0f2zusjbf7r.cloudfront.net/360/158472d2-89b2-4257-94fe-f25c3cf00cf2.png", link: "https://luxuryfoods.vn/product/bap-bo-uc-1kg--p1127706" }
             ];
 
             function getRandomElement(arr) {
@@ -39,9 +42,9 @@
                 $('.order-popup').addClass('order-popup--visible');
 				
 				// Ẩn popup sau 10 giây
-                //setTimeout(function() {
-                //    $('.order-popup').removeClass('order-popup--visible');
-				//}, 10000);
+                setTimeout(function() {
+                    $('.order-popup').removeClass('order-popup--visible');
+				}, 10000);
             }
 			
 			// Ẩn popup khi click Close
@@ -52,5 +55,5 @@
             });
 			
 			// Gọi hàm hiển thị đơn hàng mỗi 20 giây
-            setInterval(showRandomOrder, 20000);
+            setInterval(showRandomOrder, 15000);
         });
