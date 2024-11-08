@@ -22,7 +22,7 @@ section.container-fluid {
 }
 @media screen and (max-width: 992px) {
 .tm-menu-slider-layout-1 .menu-mobile {
-  display: none;
+  display: none !important;
 }
 }
 
@@ -52,9 +52,9 @@ section[id*="tm-menu-slider-layout-1"] {
 }
 @media only screen and (max-width: 767px) {
 	.promotion-banner-10 .img-fluid {
-    width: 190%;
+    width: 50%;
     height: 120px;
-    object-fit: contain;
+    object-fit: cover;
 }
 }
 /* Product */
