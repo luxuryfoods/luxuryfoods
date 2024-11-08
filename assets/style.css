@@ -210,7 +210,7 @@ section#news-2 {
 .order-popup__name {
 	font-weight: bold;
 	line-height: 1.2;
-	margin: 0 5px 6px 0;
+	margin: 0 5px 8px 0;
 	display: block;
 }
 .order-popup__phone {
@@ -227,6 +227,8 @@ section#news-2 {
 	position: absolute;
 	top: 0;
 	right: 0;
+	width: 20px;
+	height: 20px;
 	background: none;
 	color: #FFF;
 	border: none;
