@@ -101,6 +101,9 @@ section[class*="product"] .collection .item .content .price {
 	color: var(--price);
 }
 
+.product-collection-list-2-grey-background .list-product .collection-item.pagination-column-4 {
+    padding: 0 6px;
+}
 #similar-product #similar-item-detail .product-box,
 .list-product .collection-box,
 .colum-custom-type-5 .item-wrapper {
