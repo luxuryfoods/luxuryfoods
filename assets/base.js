@@ -5,8 +5,8 @@
             var addresses = ["Hà Nội", "Đông Sơn", "Ninh Bình", "Thanh Hóa", "Hoằng Hóa", "Nghi Sơn", "Sầm Sơn", "Nghệ An", "Thọ Xuân", "TP. Thanh Hóa"];
 			var times = ["1 phút", "3 phút", "5 phút", "10 phút", "16 phút", "1 giờ", "2 giờ", "3 giờ", "22 phút", "35 phút"];
             var products = [
-                { name: "Thị Bò Mỹ", image: "https://d3a0f2zusjbf7r.cloudfront.net/400/f14e5fdb-24cc-4483-9b36-6e53e0d7a81f.png", link: "https://luxuryfoods.vn/vi/collection/product/thit-bo-my-c40128?collectionPage=%5B1%5D" },
-                { name: "Thị Bò Úc", image: "https://d3a0f2zusjbf7r.cloudfront.net/400/ff5e00b1-aa8f-4171-93d4-462d0a376960.png", link: "https://luxuryfoods.vn/vi/collection/product/thit-bo-uc-c40133?collectionPage=%5B1%5D" },
+                { name: "Thịt Bò Mỹ", image: "https://d3a0f2zusjbf7r.cloudfront.net/400/f14e5fdb-24cc-4483-9b36-6e53e0d7a81f.png", link: "https://luxuryfoods.vn/vi/collection/product/thit-bo-my-c40128?collectionPage=%5B1%5D" },
+                { name: "Thịt Bò Úc", image: "https://d3a0f2zusjbf7r.cloudfront.net/400/ff5e00b1-aa8f-4171-93d4-462d0a376960.png", link: "https://luxuryfoods.vn/vi/collection/product/thit-bo-uc-c40133?collectionPage=%5B1%5D" },
                 { name: "Bơ, sữa chua, phô mai", image: "https://p16-oec-va.ibyteimg.com/tos-maliva-i-o3syd03w52-us/ad48761b4ed942a2962982ffcee1dd25~tplv-o3syd03w52-origin-jpeg.jpeg", link: "https://luxuryfoods.vn/vi/collection/product/bo-sua-va-pho-mai-c39868?collectionPage=%5B1%5D" },
                 { name: "Hải sản nhập khẩu", image: "https://d3a0f2zusjbf7r.cloudfront.net/400/3f94e301-002d-4e8f-b059-94ca9fac578f.png", link: "https://luxuryfoods.vn/vi/collection/product/hai-san-nhap-khau-c39586?collectionPage=%5B1%5D" },
                 { name: "Đồ khô & Gia vị", image: "https://d3a0f2zusjbf7r.cloudfront.net/452/96fea923-7b79-416c-9fba-107eed8a11e2.png", link: "https://luxuryfoods.vn/vi/collection/product/do-kho-va-gia-vi-c39824" },
