@@ -159,13 +159,18 @@ section#news-2 {
 	margin-bottom: 0;
 }
 /* Btn */
+.checkout-container .action-checkout button.buynow {
+	border: 1px solid var(--primary, #8b0000);
+}
+.checkout-container .action-checkout button.buynow:hover {
+    background-color: var(--primary, #8b0000);
+}
 .multi-collection-items button.btn,
 .btn-view-more {
   --setting-primary-color: var(--primary, #8b0000);
   background: #FFF;
   border: 1px solid var(--primary, #8b0000);
   border-radius: 3px!important;
-  margin
 }
 /* Introduction Banner */
 .introduction-4__wrapper {
