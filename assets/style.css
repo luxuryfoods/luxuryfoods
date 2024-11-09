@@ -101,11 +101,13 @@ section[class*="product"] .collection .item .content .price {
 	color: var(--price);
 }
 .product-service-multi-collection-default .multi-collection-items .multi-coll-item--hover picture,
+.product-collection-list-4-wrapper .swiper-slide picture,
 .collection .item .image {
 	padding-top: 100%;
-	height: auto !important;
+	height: auto;
 }
 .product-service-multi-collection-default .multi-collection-items .multi-coll-item--hover picture img,
+.product-collection-list-4-wrapper .swiper-slide picture img,
 .collection .item .image img {
 	right: 0;
 	width: 100% !important;
