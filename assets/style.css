@@ -110,6 +110,9 @@ section[class*="product"] .collection .item .content .price {
 .product-collection-list-4-wrapper .product-list-container .thumbnail {
 	padding: 0 !important;
 }
+.product-collection-list-4-wrapper .swiper-slider {
+	padding: 6px 0 12px;
+}
 
 /*
 .product-service-multi-collection-default .multi-collection-items .multi-coll-item--hover picture,
