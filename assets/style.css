@@ -100,15 +100,15 @@ section[class*="product"] .collection .item .content .price {
 	margin-top: 0;
 	color: var(--price);
 }
-.product-service-multi-collection-default .multi-collection-items .multi-coll-item--hover picture,
-.product-collection-list-4-wrapper .swiper-slide picture,
-.collection .item .image {
+.1product-service-multi-collection-default .multi-collection-items .multi-coll-item--hover picture,
+.1product-collection-list-4-wrapper .swiper-slide picture,
+.1collection .item .image {
 	padding-top: 100%;
 	height: auto;
 }
-.product-service-multi-collection-default .multi-collection-items .multi-coll-item--hover picture img,
-.product-collection-list-4-wrapper .swiper-slide picture img,
-.collection .item .image img {
+.1product-service-multi-collection-default .multi-collection-items .multi-coll-item--hover picture img,
+.1product-collection-list-4-wrapper .swiper-slide picture img,
+.1collection .item .image img {
 	right: 0;
 	width: 100% !important;
 	height: 100% !important;
