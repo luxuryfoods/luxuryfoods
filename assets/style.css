@@ -70,7 +70,7 @@ section[id*="tm-menu-slider-layout-1"] {
 }
 }
 /* Product */
-	.multi-collection-items > div > div {
+.multi-collection-items > div > div {
 	overflow: hidden;
 }
 section[class*="product"] .collection {
@@ -99,6 +99,9 @@ section[class*="product"] .collection .item .content {
 section[class*="product"] .collection .item .content .price {
 	margin-top: 0;
 	color: var(--price);
+}
+.colum-custom-type-5 .item-wrapper {
+	border: 1px solid var(--border);
 }
 .product-list-container .colum-custom-type-5 .swiper-banner {
 	height: auto !important;
