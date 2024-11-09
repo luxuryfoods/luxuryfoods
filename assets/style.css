@@ -114,15 +114,12 @@ section[class*="product"] .collection .item .content .price {
 	padding: 6px 0 12px;
 }
 
-/*
-.product-service-multi-collection-default .multi-collection-items .multi-coll-item--hover picture,
-.product-collection-list-4-wrapper .swiper-slide picture,
+.tm-product-service-layout-12 .collection .item .image,
 .collection .item .image {
 	padding-top: 100%;
 	height: auto;
 }
-.product-service-multi-collection-default .multi-collection-items .multi-coll-item--hover picture img,
-.product-collection-list-4-wrapper .swiper-slide picture img,
+.tm-product-service-layout-12 .collection .item .image img,
 .collection .item .image img {
 	right: 0;
 	width: 100% !important;
@@ -136,7 +133,7 @@ section[class*="product"] .collection .item .content .price {
 	-o-object-fit: cover;
 	object-fit: cover;
 }
-*/
+
 /* TIN TỨC */
 section#news-2 {
 	padding: 30px 0;
