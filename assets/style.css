@@ -100,6 +100,7 @@ section[class*="product"] .collection .item .content .price {
 	margin-top: 0;
 	color: var(--price);
 }
+#similar-product #similar-item-detail .product-box,
 .list-product .collection-item,
 .colum-custom-type-5 .item-wrapper {
 	border: 1px solid var(--border);
