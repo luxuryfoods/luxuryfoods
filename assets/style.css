@@ -102,6 +102,7 @@ section[class*="product"] .collection .item .content .price {
 }
 .colum-custom-type-5 .item-wrapper {
 	border: 1px solid var(--border);
+	overflow: hidden;
 }
 .product-list-container .colum-custom-type-5 .swiper-banner {
 	height: auto !important;
