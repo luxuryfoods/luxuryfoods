@@ -100,15 +100,16 @@ section[class*="product"] .collection .item .content .price {
 	margin-top: 0;
 	color: var(--price);
 }
-.1product-service-multi-collection-default .multi-collection-items .multi-coll-item--hover picture,
-.1product-collection-list-4-wrapper .swiper-slide picture,
-.1collection .item .image {
+/*
+.product-service-multi-collection-default .multi-collection-items .multi-coll-item--hover picture,
+.product-collection-list-4-wrapper .swiper-slide picture,
+.collection .item .image {
 	padding-top: 100%;
 	height: auto;
 }
-.1product-service-multi-collection-default .multi-collection-items .multi-coll-item--hover picture img,
-.1product-collection-list-4-wrapper .swiper-slide picture img,
-.1collection .item .image img {
+.product-service-multi-collection-default .multi-collection-items .multi-coll-item--hover picture img,
+.product-collection-list-4-wrapper .swiper-slide picture img,
+.collection .item .image img {
 	right: 0;
 	width: 100% !important;
 	height: 100% !important;
@@ -121,7 +122,7 @@ section[class*="product"] .collection .item .content .price {
 	-o-object-fit: cover;
 	object-fit: cover;
 }
-
+*/
 /* TIN TỨC */
 section#news-2 {
 	padding: 30px 0;
