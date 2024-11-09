@@ -294,3 +294,8 @@ section#news-2 {
 	height: 100%;
 	z-index: 1;
 }
+
+/* Product Page */
+#news-1.news-style-1 .news-item img {
+    height: 55% !important;
+}
