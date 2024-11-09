@@ -4,6 +4,7 @@ body {
 	--secondary: #8b0000;
 	--border: #dee2e6;
 	--price: #eb2143;
+	font-size: 16px;
 }
 .display-video-style .container-video,
 div.cp-contact-us-1, .container,
@@ -299,4 +300,9 @@ section#news-2 {
 /* Product Page */
 #news-1.news-style-1 .news-item img {
     height: 55% !important;
+}
+
+/* Article Page */
+.article-element p {
+	font-size: 18px;
 }
