@@ -100,10 +100,12 @@ section[class*="product"] .collection .item .content .price {
 	margin-top: 0;
 	color: var(--price);
 }
+
 #similar-product #similar-item-detail .product-box,
 .list-product .collection-box,
 .colum-custom-type-5 .item-wrapper {
 	border: 1px solid var(--border);
+	border-radius: 6px;
 	overflow: hidden;
 }
 .product-list-container .colum-custom-type-5 .swiper-banner {
