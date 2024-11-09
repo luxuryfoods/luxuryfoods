@@ -101,7 +101,7 @@ section[class*="product"] .collection .item .content .price {
 	color: var(--price);
 }
 #similar-product #similar-item-detail .product-box,
-.list-product .collection-item,
+.list-product .collection-box,
 .colum-custom-type-5 .item-wrapper {
 	border: 1px solid var(--border);
 	overflow: hidden;
