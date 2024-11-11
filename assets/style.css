@@ -77,6 +77,7 @@ section[id*="tm-menu-slider-layout-1"] {
 .product-collection-list-4-wrapper .info .name .h3,
 .list-product-checkout-1 .collection .item .content .description,
 .text-2line {
+	--font-size: 14px;
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
@@ -85,7 +86,7 @@ section[id*="tm-menu-slider-layout-1"] {
     font-size: var(--font-size);
     line-height: var(--line-height);
     height: calc(var(--line-height) * var(--font-size) * var(--line-clamp));
-	min-height: unset;
+	min-height: unset !important;
 }
 
 .multi-collection-items > div > div {
