@@ -1,9 +1,14 @@
 /* GLOBAL */
-body {
+:root {
 	--primary: #8b0000;
 	--secondary: #8b0000;
 	--border: #dee2e6;
 	--price: #eb2143;
+    --line-clamp: 2;
+    --line-height: 1.5;
+    --font-size: 16px;
+}
+body {
 	font-size: 16px;
 }
 .display-video-style .container-video,
@@ -26,9 +31,18 @@ section.container-fluid {
   display: none !important;
 }
 }
-/*div.title-fist .title, .h2, h2 {
-	font-size: clamp(22px, 2.5vw, 32px) !important; 
-}*/
+
+.list-product-checkout-1 .collection .item .content .description,
+.text-2line {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: var(--line-clamp);
+    font-size: var(--font-size);
+    line-height: var(--line-height);
+    height: calc(var(--line-height) * var(--font-size) * var(--line-clamp));
+}
 /* HOME */
 /* Hero banner */
 section[id*="tm-menu-slider-layout-1"] {
