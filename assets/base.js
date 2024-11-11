@@ -62,7 +62,7 @@
             function setHideTimeout() {
                 clearTimeout(hideTimeout);
                 if (!isHovering) {
-                    hideTimeout = setTimeout(hidePopup, 5000);
+                    hideTimeout = setTimeout(hidePopup, 10000);
                 }
             }
 
@@ -91,5 +91,5 @@
                 }
             }
 
-            setInterval(checkAndShowPopup, 10000);
+            setInterval(checkAndShowPopup, 7000);
         });
