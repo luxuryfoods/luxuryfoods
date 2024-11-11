@@ -31,19 +31,7 @@ section.container-fluid {
   display: none !important;
 }
 }
-.product-collection-list-4-wrapper .info .name .h3,
-.list-product-checkout-1 .collection .item .content .description,
-.text-2line {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: var(--line-clamp);
-    font-size: var(--font-size);
-    line-height: var(--line-height);
-    height: calc(var(--line-height) * var(--font-size) * var(--line-clamp));
-	min-height: unset;
-}
+
 /* HOME */
 /* Hero banner */
 section[id*="tm-menu-slider-layout-1"] {
@@ -86,6 +74,20 @@ section[id*="tm-menu-slider-layout-1"] {
 }
 }
 /* Product */
+.product-collection-list-4-wrapper .info .name .h3,
+.list-product-checkout-1 .collection .item .content .description,
+.text-2line {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: var(--line-clamp);
+    font-size: var(--font-size);
+    line-height: var(--line-height);
+    height: calc(var(--line-height) * var(--font-size) * var(--line-clamp));
+	min-height: unset;
+}
+
 .multi-collection-items > div > div {
 	overflow: hidden;
 }
@@ -139,6 +141,21 @@ section[class*="product"] .collection .item .content .price {
 	padding: 6px 4px 12px;
 }
 
+/* Hỉnh ảnh tỉ lệ 1:1 */
+.product-collection-list-wrapper .thumbnail {
+    position: relative;
+    width: 100%;
+    padding-bottom: 100%;
+    overflow: hidden;
+}
+.product-collection-list-wrapper .thumbnail .image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
 .tm-product-service-layout-12 .collection .item .image,
 .collection .item .image {
 	padding-top: 100%;
