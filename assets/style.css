@@ -377,3 +377,33 @@ section#news-2 {
 .article-element p {
 	font-size: 18px;
 }
+/* Sidebar */
+.article-element .latest-article-container img {
+    width: 30%;
+    height: auto;
+    aspect-ratio: 8 / 5;
+    object-fit: cover;
+	border-radius: 5px;
+}
+.article-element .latest-article-container .latest-article-description {
+    width: 70%;
+}
+/*  Bài viết tương tự */
+.article-element .related-articles {
+	width: 100%;
+}
+.article-element .related-articles .related-article-it {
+	background: #fff;
+	border: 1px solid var(--border);
+	border-radius: 5px;
+	overflow: hidden;
+}
+.article-element .related-articles .image-size-scale {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 8 / 5;
+    object-fit: cover;
+}
+.article-element .related-articles .related-article-it .limit-3-lines-text {
+	padding: 5px 10px 0;
+}
