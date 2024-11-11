@@ -143,39 +143,29 @@ section[class*="product"] .collection .item .content .price {
 }
 
 /* Hỉnh ảnh tỉ lệ 1:1 */
+.tm-product-service-layout-12 .collection .item .image,
+.collection .item .image,
 body .product-collection-list-4-wrapper .product-list-container .thumbnail picture {
     position: relative;
     width: 100%;
+	height: auto;
     padding-bottom: 100% !important;
     overflow: hidden;
 }
-body .product-collection-list-4-wrapper .product-list-container .thumbnail picture img.image {
+body .product-collection-list-4-wrapper .product-list-container .thumbnail picture img.image,
+.tm-product-service-layout-12 .collection .item .image img,
+.collection .item .image img {
     position: absolute;
     top: 0;
     left: 0;
+	right: 0;
+	bottom: 0;
 	width: 100% !important;
 	height: 100% !important;
     object-fit: cover;
-	display: block;
-}
-.tm-product-service-layout-12 .collection .item .image,
-.collection .item .image {
-	padding-top: 100%;
-	height: auto;
-}
-.tm-product-service-layout-12 .collection .item .image img,
-.collection .item .image img {
-	right: 0;
-	width: 100% !important;
-	height: 100% !important;
-	bottom: 0;
-	left: 0;
-	top: 0;
-	position: absolute;
+	-o-object-fit: cover;
 	-o-object-position: 50% 50%;
 	object-position: 50% 50%;
-	-o-object-fit: cover;
-	object-fit: cover;
 }
 
 /* TIN TỨC */
