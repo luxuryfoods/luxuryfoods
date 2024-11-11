@@ -303,10 +303,76 @@ section#news-2 {
 }
 
 /* Product Page */
-#news-1.news-style-1 .news-item img {
-    height: 55% !important;
+#new-detail.new-detail .branch-list .options .radio-button input[type="radio"]:checked+.radio-circle::before {
+	background: var(--primary);
+}
+#new-detail.new-detail .addtocart .buynow {
+	background: var(--primary);
+	border: 1px solid var(--primary);
+}
+#product-review.product-review .item-information .nav-item.active {
+	background-color: var(--primary);
+}
+#product-review.product-review .item-information .nav-item {
+	border: 1px solid var(--primary);
+	color: var(--primary);
+}
+#product-review.product-review .tab-content {
+	border: 1px solid var(--primary);
+	font-size: 16px;
+}
+#similar-product .h3.title-product-description {
+	color: var(--primary);
+}
+#similar-product .h3.title-product-description:after {
+	display: none;
+}
+#similar-product #similar-item-detail .product-box {
+	border-radius: 5px;
+	background: #fafafa;
+	overflow: hidden;
+}
+#similar-product #similar-item-detail .product-box .center-image {
+	padding-top: 100%;
+}
+#similar-product #similar-item-detail .product-box .center-image .image {
+	right: 0;
+	width: 100%;
+	height: 100%;
+	bottom: 0;
+	left: 0;
+	top: 0;
+	position: absolute;
+	-o-object-position: 50% 50%;
+	object-position: 50% 50%;
+	-o-object-fit: cover;
+	object-fit: cover;
 }
 
+@media only screen and (max-width: 1657px) {
+#news-1 {
+	max-width: 1200px !important;
+}
+}
+#news-1 .news-item {
+	background-color: #fff;
+	border-radius: 5px;
+	overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+	padding: 0;
+	margin-bottom: 15px;
+}
+#news-1 .row .news-item img.image-size-scale {
+    width: 100%;
+    height: auto !important;
+    aspect-ratio: 8 / 5;
+    object-fit: cover !important;
+}
+#news-1 .featured-text {
+    display: none !important;
+}
 /* Article Page */
 .article-element p {
 	font-size: 18px;
