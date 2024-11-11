@@ -12,8 +12,8 @@
             ];
 
             var hideTimeout;
+            var updateTimeout;
             var isHovering = false;
-            var shouldUpdateContent = true;
 
             function getRandomElement(arr) {
                 return arr[Math.floor(Math.random() * arr.length)];
@@ -24,8 +24,6 @@
             }
 
             function updatePopupContent() {
-                if (!shouldUpdateContent) return;
-
                 var firstName = getRandomElement(firstNames);
                 var lastName = getRandomElement(lastNames);
                 var phone = generatePhoneNumber();
@@ -43,11 +41,16 @@
             function showPopup() {
                 updatePopupContent();
                 $('.order-popup').addClass('order-popup--visible');
-                setHideTimeout();
             }
 
             function hidePopup() {
                 $('.order-popup').removeClass('order-popup--visible');
+                clearTimeout(updateTimeout);
+                updateTimeout = setTimeout(function() {
+                    if (!isHovering) {
+                        updatePopupContent();
+                    }
+                }, 500); // Đợi hiệu ứng ẩn hoàn tất (500ms) trước khi cập nhật nội dung
             }
 
             function setHideTimeout() {
@@ -61,12 +64,10 @@
                 function() {
                     isHovering = true;
                     clearTimeout(hideTimeout);
-                    shouldUpdateContent = false;
                 },
                 function() {
                     isHovering = false;
                     setHideTimeout();
-                    shouldUpdateContent = true;
                 }
             );
 
@@ -78,8 +79,9 @@
             });
 
             function checkAndShowPopup() {
-                if (!isHovering) {
+                if (!isHovering && !$('.order-popup').hasClass('order-popup--visible')) {
                     showPopup();
+                    setHideTimeout();
                 }
             }
 
