@@ -329,6 +329,7 @@ section#news-2 {
 #product-detail #new-detail.new-detail .branch-list .options .radio-button input[type="radio"]:checked+.radio-circle::before {
 	background: var(--primary);
 }
+#product-detail #new-detail.new-detail .contact-now,
 #product-detail #new-detail.new-detail .addtocart .buynow {
 	background: var(--primary);
 	border: 1px solid var(--primary);
