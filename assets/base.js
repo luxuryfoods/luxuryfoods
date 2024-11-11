@@ -1,4 +1,5 @@
 		$(document).ready(function() {
+			var hideTimeout;
             var firstNames = ["Nguyễn", "Trần", "Lê", "Phạm", "Hoàng", "Phan", "Vũ", "Đặng", "Bùi", "Đỗ"];
             var lastNames = ["An", "Bình", "Cường", "Dung", "Em", "Phương", "Quỳnh", "Sơn", "Thảo", "Uyên"];
             var phones = ["090", "091", "092", "093", "094", "095", "096", "097", "098", "099"];
@@ -41,19 +42,38 @@
 
                 $('.order-popup').addClass('order-popup--visible');
 				
-				// Ẩn popup sau 10 giây
-                setTimeout(function() {
-                    $('.order-popup').removeClass('order-popup--visible');
-				}, 10000);
+				// Ẩn popup
+                setHideTimeout();
             }
+			
+			function setHideTimeout() {
+                clearTimeout(hideTimeout);
+                hideTimeout = setTimeout(function() {
+                    $('.order-popup').removeClass('order-popup--visible');
+                }, 10000);
+            }
+			
+            $('.order-popup').hover(
+                function() {
+                    clearTimeout(hideTimeout);
+                },
+                function() {
+                    setHideTimeout();
+                }
+            );
 			
 			// Ẩn popup khi click Close
             $('.order-popup__close').click(function(e) {
                 e.preventDefault();
                 e.stopPropagation();
                 $('.order-popup').removeClass('order-popup--visible');
+                clearTimeout(hideTimeout);
             });
 			
 			// Gọi hàm hiển thị đơn hàng mỗi 7 giây
             setInterval(showRandomOrder, 7000);
         });
+		
+		
+		
+		
