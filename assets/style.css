@@ -142,19 +142,22 @@ section[class*="product"] .collection .item .content .price {
 }
 
 /* Hỉnh ảnh tỉ lệ 1:1 */
-body .product-collection-list-4-wrapper .product-list-container .thumbnail {
+body .product-collection-list-4-wrapper .product-list-container .thumbnail picture {
     position: relative;
     width: 100%;
     padding-bottom: 100% !important;
     overflow: hidden;
+	background-color: #f0f0f0;
 }
-.product-collection-list-wrapper .thumbnail .image {
+body .product-collection-list-4-wrapper .product-list-container .thumbnail picture img.image {
     position: absolute;
     top: 0;
     left: 0;
 	width: 100% !important;
 	height: 100% !important;
     object-fit: cover;
+	display: block;
+	border: 2px solid blue;
 }
 .tm-product-service-layout-12 .collection .item .image,
 .collection .item .image {
