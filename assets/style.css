@@ -147,7 +147,6 @@ body .product-collection-list-4-wrapper .product-list-container .thumbnail pictu
     width: 100%;
     padding-bottom: 100% !important;
     overflow: hidden;
-	background-color: #f0f0f0;
 }
 body .product-collection-list-4-wrapper .product-list-container .thumbnail picture img.image {
     position: absolute;
@@ -157,7 +156,6 @@ body .product-collection-list-4-wrapper .product-list-container .thumbnail pictu
 	height: 100% !important;
     object-fit: cover;
 	display: block;
-	border: 2px solid blue;
 }
 .tm-product-service-layout-12 .collection .item .image,
 .collection .item .image {
