@@ -4,9 +4,6 @@
 	--secondary: #8b0000;
 	--border: #dee2e6;
 	--price: #eb2143;
-    --line-clamp: 2;
-    --line-height: 1.5;
-    --font-size: 16px;
 }
 body {
 	font-size: 16px;
@@ -77,15 +74,17 @@ section[id*="tm-menu-slider-layout-1"] {
 .product-collection-list-4-wrapper .info .name .h3,
 .list-product-checkout-1 .collection .item .content .description,
 .text-2line {
-	--font-size: 14px;
+    --line-clamp: 2;
+    --line-height: 1.4;
+    --font-size: 14px;
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
     -webkit-box-orient: vertical;
-    -webkit-line-clamp: var(--line-clamp);
-    font-size: var(--font-size);
-    line-height: var(--line-height);
-    height: calc(var(--line-height) * var(--font-size) * var(--line-clamp));
+    -webkit-line-clamp: var(--line-clamp) !important;
+    font-size: var(--font-size) !important;
+    line-height: var(--line-height) !important;
+    height: calc(var(--line-height) * var(--font-size) * var(--line-clamp)) !important;
 	min-height: unset !important;
 }
 
