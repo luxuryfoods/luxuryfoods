@@ -142,7 +142,7 @@ section[class*="product"] .collection .item .content .price {
 }
 
 /* Hỉnh ảnh tỉ lệ 1:1 */
-.product-collection-list-wrapper .thumbnail {
+body .product-collection-list-4-wrapper .product-list-container .thumbnail {
     position: relative;
     width: 100%;
     padding-bottom: 100% !important;
