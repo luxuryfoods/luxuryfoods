@@ -31,7 +31,7 @@ section.container-fluid {
   display: none !important;
 }
 }
-
+.product-collection-list-4-wrapper .info .name .h3,
 .list-product-checkout-1 .collection .item .content .description,
 .text-2line {
     overflow: hidden;
@@ -42,6 +42,7 @@ section.container-fluid {
     font-size: var(--font-size);
     line-height: var(--line-height);
     height: calc(var(--line-height) * var(--font-size) * var(--line-clamp));
+	min-height: unset;
 }
 /* HOME */
 /* Hero banner */
