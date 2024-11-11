@@ -65,4 +65,3 @@
 
             setInterval(showRandomOrder, 10000);
         });
-    </script>
