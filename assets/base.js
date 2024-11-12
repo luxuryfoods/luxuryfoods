@@ -1,36 +1,25 @@
-// Lấy tất cả các phần tử có class "group-btn"
-const groupBtns = document.querySelectorAll('.group-btn');
+$(document).ready(function() {
+    // Tìm tất cả các phần tử có class "group-btn"
+    $('.group-btn').each(function(index) {
+        // Kiểm tra xem phần tử có con hay không
+        if ($(this).children().length === 0) {
+            // Hiển thị thông báo nếu tìm thấy phần tử rỗng
+            console.log(`Phần tử group-btn thứ ${index + 1} rỗng.`);
+            alert(`Phần tử group-btn thứ ${index + 1} rỗng.`);
+            
+            // Tạo thẻ <a>
+            const link = $('<a></a>')
+                .attr('href', '#') // Đặt href cho thẻ <a>
+                .text('Mua ngay') // Nội dung của thẻ <a>
+                .addClass('btn-buy'); // Thêm class nếu cần
 
-// Lấy tất cả các phần tử có class "group-btn"
-const groupBtns = document.querySelectorAll('.group-btn');
-
-// Kiểm tra số lượng phần tử "group-btn" đã được tìm thấy
-console.log(`Tìm thấy ${groupBtns.length} phần tử group-btn.`);
-
-// Duyệt qua từng phần tử "group-btn"
-groupBtns.forEach((btn, index) => {
-    // Kiểm tra xem phần tử có con hay không
-    if (btn.children.length === 0) {
-        console.log(`Phần tử group-btn thứ ${index + 1} không có phần tử con.`);
-
-        // Tạo thẻ <a>
-        const link = document.createElement('a');
-        link.href = '#'; // Đặt href cho thẻ <a>
-        link.textContent = 'Mua ngay'; // Nội dung của thẻ <a>
-        link.className = 'btn-buy'; // Thêm class nếu cần
-
-        // Thêm thẻ <a> vào phần tử "group-btn"
-        btn.appendChild(link);
-        console.log(`Đã thêm thẻ <a> vào phần tử group-btn thứ ${index + 1}.`);
-    } else {
-        console.log(`Phần tử group-btn thứ ${index + 1} đã có phần tử con.`);
-    }
-});
-
-// Kiểm tra lại các phần tử "group-btn" sau khi thêm thẻ <a>
-const updatedGroupBtns = document.querySelectorAll('.group-btn');
-updatedGroupBtns.forEach((btn, index) => {
-    console.log(`Phần tử group-btn thứ ${index + 1} hiện có ${btn.children.length} phần tử con.`);
+            // Thêm thẻ <a> vào phần tử "group-btn"
+            $(this).append(link);
+            console.log(`Đã thêm thẻ <a> vào phần tử group-btn thứ ${index + 1}.`);
+        } else {
+            console.log(`Phần tử group-btn thứ ${index + 1} đã có phần tử con.`);
+        }
+    });
 });
         $(document).ready(function() {
             var firstNames = ["Nguyễn", "Trần", "Lê", "Phạm", "Hoàng", "Phan", "Vũ", "Đặng", "Bùi", "Đỗ"];
