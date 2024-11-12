@@ -1,4 +1,23 @@
-        $(document).ready(function() {
+	$(document).ready(function() {
+        // Duyệt qua tất cả các phần tử có lớp group-btn
+        $('.group-btn').each(function() {
+            // Kiểm tra nếu div rỗng
+            if ($(this).is(':empty')) {
+                // Tạo thẻ liên kết
+                const link = $('<a></a>')
+                    .attr('href', 'tel:900') // Số điện thoại để gọi
+                    .text('Liên hệ') // Văn bản hiển thị
+                    .css({
+                        color: '#007bff', // Màu chữ
+                        textDecoration: 'none', // Bỏ gạch chân
+                        fontSize: '16px' // Kích thước chữ
+                    });
+
+                // Thêm thẻ liên kết vào div
+                $(this).append(link);
+            }
+        });
+		
             var firstNames = ["Nguyễn", "Trần", "Lê", "Phạm", "Hoàng", "Phan", "Vũ", "Đặng", "Bùi", "Đỗ"];
             var lastNames = ["An", "Bình", "Cường", "Dung", "Em", "Phương", "Quỳnh", "Sơn", "Thảo", "Uyên"];
             var phones = ["090", "091", "092", "093", "094", "095", "096", "097", "098", "099"];
