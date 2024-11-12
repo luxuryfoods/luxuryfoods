@@ -410,7 +410,7 @@ section#news-2 {
 .article-element .latest-article-container img {
     width: 30%;
     height: auto;
-    aspect-ratio: 16 / 9;
+    aspect-ratio: 8 / 4;
     object-fit: cover;
 	border-radius: 5px;
 }
