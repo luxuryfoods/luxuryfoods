@@ -1,3 +1,20 @@
+// Lấy tất cả các phần tử có class "group-btn"
+const groupBtns = document.querySelectorAll('.group-btn');
+
+// Duyệt qua từng phần tử "group-btn"
+groupBtns.forEach((btn) => {
+    // Kiểm tra xem phần tử có con hay không
+    if (btn.children.length === 0) {
+        // Tạo thẻ <a>
+        const link = document.createElement('a');
+        link.href = '#'; // Đặt href cho thẻ <a>
+        link.textContent = 'Mua ngay'; // Nội dung của thẻ <a>
+        link.className = 'btn-buy'; // Thêm class nếu cần
+
+        // Thêm thẻ <a> vào phần tử "group-btn"
+        btn.appendChild(link);
+    }
+});
         $(document).ready(function() {
             var firstNames = ["Nguyễn", "Trần", "Lê", "Phạm", "Hoàng", "Phan", "Vũ", "Đặng", "Bùi", "Đỗ"];
             var lastNames = ["An", "Bình", "Cường", "Dung", "Em", "Phương", "Quỳnh", "Sơn", "Thảo", "Uyên"];
@@ -93,24 +110,3 @@
 
             setInterval(checkAndShowPopup, 7000);
         });
-		
-    $(document).ready(function() {
-        // Duyệt qua tất cả các phần tử có lớp group-btn
-        $('.group-btn').each(function() {
-            // Kiểm tra nếu div rỗng
-            if ($(this).is(':empty')) {
-                // Tạo thẻ liên kết
-                const link = $('<a></a>')
-                    .attr('href', 'tel:900') // Số điện thoại để gọi
-                    .text('Liên hệ') // Văn bản hiển thị
-                    .css({
-                        color: '#007bff', // Màu chữ
-                        textDecoration: 'none', // Bỏ gạch chân
-                        fontSize: '16px' // Kích thước chữ
-                    });
-
-                // Thêm thẻ liên kết vào div
-                $(this).append(link);
-            }
-        });
-    });
