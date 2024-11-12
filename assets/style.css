@@ -408,14 +408,14 @@ section#news-2 {
 }
 /* Sidebar */
 .article-element .latest-article-container img {
-    width: 30%;
+    width: 35%;
     height: 100%;
-    aspect-ratio: 16 / 9;
+    aspect-ratio: 8 / 5;
     object-fit: cover;
 	border-radius: 5px;
 }
 .article-element .latest-article-container .latest-article-description {
-    width: 70%;
+    width: 65%;
 }
 .article-element .latest-article-description p {
 	font-size: 16px;
