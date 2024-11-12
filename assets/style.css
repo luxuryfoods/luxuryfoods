@@ -410,15 +410,19 @@ section#news-2 {
 .article-element .latest-article-container img {
     width: 30%;
     height: 100%;
-    aspect-ratio: 8 / 6;
+    aspect-ratio: 16 / 9;
     object-fit: cover;
 	border-radius: 5px;
 }
 .article-element .latest-article-container .latest-article-description {
     width: 70%;
 }
-.article-element .latest-article-container p {
+.article-element .latest-article-description p {
 	font-size: 16px;
+	margin-bottom: 10px;
+}
+.article-element .latest-article-description span {
+	font-size: 14px;
 }
 /*  Bài viết tương tự */
 .article-element .related-articles {
