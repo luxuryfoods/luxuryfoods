@@ -1,23 +1,4 @@
-	$(document).ready(function() {
-        // Duyệt qua tất cả các phần tử có lớp group-btn
-        $('.group-btn').each(function() {
-            // Kiểm tra nếu div rỗng
-            if ($(this).is(':empty')) {
-                // Tạo thẻ liên kết
-                const link = $('<a></a>')
-                    .attr('href', 'tel:900') // Số điện thoại để gọi
-                    .text('Liên hệ') // Văn bản hiển thị
-                    .css({
-                        color: '#007bff', // Màu chữ
-                        textDecoration: 'none', // Bỏ gạch chân
-                        fontSize: '16px' // Kích thước chữ
-                    });
-
-                // Thêm thẻ liên kết vào div
-                $(this).append(link);
-            }
-        });
-		
+        $(document).ready(function() {
             var firstNames = ["Nguyễn", "Trần", "Lê", "Phạm", "Hoàng", "Phan", "Vũ", "Đặng", "Bùi", "Đỗ"];
             var lastNames = ["An", "Bình", "Cường", "Dung", "Em", "Phương", "Quỳnh", "Sơn", "Thảo", "Uyên"];
             var phones = ["090", "091", "092", "093", "094", "095", "096", "097", "098", "099"];
@@ -112,3 +93,22 @@
 
             setInterval(checkAndShowPopup, 7000);
         });
+		
+    const groupBtns = document.querySelectorAll('.group-btn');
+
+    // Duyệt qua từng phần tử
+    groupBtns.forEach(groupBtn => {
+        // Kiểm tra nếu div rỗng
+        if (!groupBtn.hasChildNodes()) {
+            // Tạo thẻ liên kết
+            const link = document.createElement('a');
+            link.href = 'tel:900'; // Số điện thoại để gọi
+            link.textContent = 'Liên hệ'; // Văn bản hiển thị
+            link.style.color = '#007bff'; // Màu chữ
+            link.style.textDecoration = 'none'; // Bỏ gạch chân
+            link.style.fontSize = '16px'; // Kích thước chữ
+
+            // Thêm thẻ liên kết vào div
+            groupBtn.appendChild(link);
+        }
+    });
