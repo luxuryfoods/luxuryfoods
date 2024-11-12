@@ -419,8 +419,9 @@ section#news-2 {
 }
 .article-element .latest-article-description p {
 	font-size: 16px;
-	margin-bottom: 10px;
+	margin-bottom: 0;
 }
+.article-element .latest-article-description i,
 .article-element .latest-article-description span {
 	font-size: 14px;
 }
