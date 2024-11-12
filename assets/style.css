@@ -396,6 +396,9 @@ section#news-2 {
     aspect-ratio: 16 / 9;
     object-fit: cover !important;
 }
+#news-1 .row .news-item .caption .caption-title {
+	font-size: 16px !important;
+}
 #news-1 .featured-text {
     display: none !important;
 }
