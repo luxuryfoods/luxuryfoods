@@ -418,6 +418,9 @@ section#news-2 {
 .article-element .related-articles {
 	width: 100%;
 }
+.article-element .related-articles-content {
+    gap: 16px;
+}
 .article-element .related-articles .related-article-it {
 	background: #fff;
 	border: 1px solid var(--border);
