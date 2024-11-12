@@ -1,8 +1,8 @@
 $(document).ready(function() {
     // Tìm tất cả các phần tử có class "group-btn"
     $('.group-btn').each(function(index) {
-        // Kiểm tra xem phần tử có con hay không
-        if ($(this).children().length === 0) {
+        // Kiểm tra xem phần tử có thực sự rỗng hay không
+        if ($.trim($(this).html()) === '') {
             // Hiển thị thông báo nếu tìm thấy phần tử rỗng
             console.log(`Phần tử group-btn thứ ${index + 1} rỗng.`);
             alert(`Phần tử group-btn thứ ${index + 1} rỗng.`);
