@@ -1,26 +1,48 @@
 $(document).ready(function() {
-    // Tìm tất cả các phần tử có class "group-btn"
-    $('.group-btn').each(function(index) {
-        // Kiểm tra xem phần tử có thực sự rỗng hay không
-        if ($.trim($(this).html()) === '') {
-            // Hiển thị thông báo nếu tìm thấy phần tử rỗng
-            console.log(`Phần tử group-btn thứ ${index + 1} rỗng.`);
-            alert(`Phần tử group-btn thứ ${index + 1} rỗng.`);
-            
-            // Tạo thẻ <a>
-            const link = $('<a></a>')
-                .attr('href', '#') // Đặt href cho thẻ <a>
-                .text('Mua ngay') // Nội dung của thẻ <a>
-                .addClass('btn-buy'); // Thêm class nếu cần
+    // Hàm kiểm tra các phần tử group-btn
+    function checkGroupBtns() {
+        $('.group-btn').each(function(index) {
+            // Kiểm tra xem phần tử có thực sự rỗng hay không
+            if ($.trim($(this).html()) === '') {
+                // Hiển thị thông báo nếu tìm thấy phần tử rỗng
+                console.log(`Phần tử group-btn thứ ${index + 1} rỗng.`);
+                alert(`Phần tử group-btn thứ ${index + 1} rỗng.`);
+                
+                // Tạo thẻ <a>
+                const link = $('<a></a>')
+                    .attr('href', '#') // Đặt href cho thẻ <a>
+                    .text('Mua ngay') // Nội dung của thẻ <a>
+                    .addClass('btn-buy'); // Thêm class nếu cần
 
-            // Thêm thẻ <a> vào phần tử "group-btn"
-            $(this).append(link);
-            console.log(`Đã thêm thẻ <a> vào phần tử group-btn thứ ${index + 1}.`);
-        } else {
-            console.log(`Phần tử group-btn thứ ${index + 1} đã có phần tử con.`);
-        }
+                // Thêm thẻ <a> vào phần tử "group-btn"
+                $(this).append(link);
+                console.log(`Đã thêm thẻ <a> vào phần tử group-btn thứ ${index + 1}.`);
+            } else {
+                console.log(`Phần tử group-btn thứ ${index + 1} đã có phần tử con.`);
+            }
+        });
+    }
+
+    // Thiết lập MutationObserver để theo dõi các thay đổi trong DOM
+    const observer = new MutationObserver(function(mutations) {
+        mutations.forEach(function(mutation) {
+            if (mutation.type === 'childList') {
+                // Nếu có phần tử mới được thêm vào, kiểm tra lại
+                checkGroupBtns();
+            }
+        });
     });
+
+    // Chọn phần tử để theo dõi
+    const targetNode = document.body; // Hoặc một selector cụ thể hơn nếu cần
+
+    // Cấu hình observer
+    const config = { childList: true, subtree: true };
+
+    // Bắt đầu theo dõi
+    observer.observe(targetNode, config);
 });
+
         $(document).ready(function() {
             var firstNames = ["Nguyễn", "Trần", "Lê", "Phạm", "Hoàng", "Phan", "Vũ", "Đặng", "Bùi", "Đỗ"];
             var lastNames = ["An", "Bình", "Cường", "Dung", "Em", "Phương", "Quỳnh", "Sơn", "Thảo", "Uyên"];
