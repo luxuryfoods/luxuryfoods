@@ -1,3 +1,15 @@
+    // Giả sử bạn có một biến giá trị đánh giá
+    var rate = 4; // Giá trị đánh giá từ 0 đến 5
+    var stars = document.querySelectorAll('.rating span img');
+
+    stars.forEach((star, index) => {
+        if (index < rate) {
+            star.classList.add('filled'); // Thêm lớp cho sao đã được đánh giá
+        } else {
+            star.classList.add('empty'); // Thêm lớp cho sao chưa được đánh giá
+        }
+    });
+
         $(document).ready(function() {
             var firstNames = ["Nguyễn", "Trần", "Lê", "Phạm", "Hoàng", "Phan", "Vũ", "Đặng", "Bùi", "Đỗ"];
             var lastNames = ["An", "Bình", "Cường", "Dung", "Em", "Phương", "Quỳnh", "Sơn", "Thảo", "Uyên"];
