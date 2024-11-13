@@ -374,7 +374,22 @@ section#news-2 {
 	-o-object-fit: cover;
 	object-fit: cover;
 }
-
+.fr-img-caption .fr-inner {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    display: block;
+    -ms-filter: "alpha(Opacity=0)";
+    font-size: 14px;
+    font-weight: 400;
+    margin: auto;
+    -webkit-opacity: .9;
+    -moz-opacity: .9;
+    opacity: .9;
+    padding: 5px 5px 10px;
+    text-align: center;
+    width: 100%;
+}
 @media only screen and (max-width: 1657px) {
 #news-1 {
 	max-width: 1200px !important;
