@@ -173,25 +173,15 @@ body .product-collection-list-4-wrapper .product-list-container .thumbnail pictu
     display: flex;
     align-items: center;
 }
-
-.rating span {
-    position: relative;
-}
-
 .rating span img {
-    width: 30px; /* Kích thước sao */
-    height: 30px; /* Kích thước sao */
-    margin-right: 5px; /* Khoảng cách giữa các sao */
+    width: 14px;
+    height: 14px;
 }
-
-/* Giả sử bạn muốn hiển thị 4 sao vàng */
 .rating span:nth-child(-n+4) img {
-    content: url('https://ssr-resource-prod.gosell.vn/images/star-yellow.svg'); /* Sao vàng */
+    content: url('https://ssr-resource-prod.gosell.vn/images/star-yellow.svg');
 }
-
-/* Các sao còn lại sẽ là sao xám */
-.rating span:nth-child(n+5) img {
-    content: url('https://ssr-resource-prod.gosell.vn/images/star-grey.svg'); /* Sao xám */
+.1rating span:nth-child(n+5) img {
+    content: url('https://ssr-resource-prod.gosell.vn/images/star-grey.svg');
 }
 /* TIN TỨC */
 section#news-2 {
