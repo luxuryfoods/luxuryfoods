@@ -177,7 +177,7 @@ body .product-collection-list-4-wrapper .product-list-container .thumbnail pictu
     width: 14px;
     height: 14px;
 }
-.rating span:nth-child(-n+4) img {
+.rating span img {
     content: url('https://ssr-resource-prod.gosell.vn/images/star-yellow.svg');
 }
 .1rating span:nth-child(n+5) img {
