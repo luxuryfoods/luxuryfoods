@@ -166,7 +166,9 @@ body .product-collection-list-4-wrapper .product-list-container .thumbnail pictu
 	-o-object-position: 50% 50%;
 	object-position: 50% 50%;
 }
-
+.rating-sold-qty-wrapper .count-rating {
+	display: none
+}
 /* TIN TỨC */
 section#news-2 {
 	padding: 30px 0;
