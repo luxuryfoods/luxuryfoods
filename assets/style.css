@@ -166,7 +166,7 @@ body .product-collection-list-4-wrapper .product-list-container .thumbnail pictu
 	-o-object-position: 50% 50%;
 	object-position: 50% 50%;
 }
-.rating-sold-qty-wrapper .count-rating {
+[class*="collection"] .count-rating {
 	display: none
 }
 .rating {
