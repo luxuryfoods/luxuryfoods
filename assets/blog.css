@@ -57,4 +57,7 @@ section #news-1 .row .news-item .caption .limit-1-line-text {
 	transform: unset !important;
     padding: 0 !important;
 }
+#news-1 .row .news-item.hover-effect:hover {
+    box-shadow: unset !important;
+}
 section .news-style-1 .caption :is( .creation-info, .featured-text ) {display: none !important}
