@@ -484,6 +484,12 @@ section#news-2 {
 
 
 /* BLOG */
+section .blog-article-1__first-article {
+    row-gap: 10px;
+}
+section .blog-article-1 .blog-article-1__featured-ar {
+    min-height: auto;
+}
 section .blog-article-1 .blog-article-1__article {
 	height: auto;
 	border: 1px solid var(--border);
