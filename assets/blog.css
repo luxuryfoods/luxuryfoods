@@ -18,7 +18,7 @@ section[layout="body"] > section + section {
 section[layout="body"] section.news-style-1 .title {
 	text-align: left !important;
 	font-size: 28px !important;
-	margin: 0 12px 40px;
+	margin: 40px 12px 20px
 }
 }
 section.news-style-1 .single-line-hr {display: none !important;}
