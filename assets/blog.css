@@ -13,6 +13,7 @@ section[layout="body"] > section + section {
 	position: sticky;
 	top: 100px;
 	overflow-y: auto;
+	height: 80vh
 }
 section[layout="body"] section.news-style-1 .title {
 	text-align: left !important;
