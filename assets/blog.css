@@ -15,10 +15,17 @@ section[layout="body"] > section + section {
 	height: 100vh;
 	overflow-y: auto;
 }
+
+section.news-style-1 .title {
+	text-align: left;
+	font-size: 28px;
+}
+section.news-style-1 .single-line-hr {display: none }
 section.news-style-1 .row {
     display: flex;
     flex-direction: column;
 }
+
 
 
 section.news-style-1 .ol-md-4 {
@@ -26,6 +33,7 @@ section.news-style-1 .ol-md-4 {
     flex: 0 0 100%;
     max-width: 100%;
 }
+
 
 }
 
