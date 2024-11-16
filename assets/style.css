@@ -509,8 +509,14 @@ section .blog-article-1 .blog-article-1__article-title {
     font-size: 18px;
     line-height: 1.5;
 }
+@media (max-width: 1024px) {
+.blog-article-1 .blog-article-1__article-grid {
+    grid-template-columns: 1fr 1fr;
+	padding: 0
+}
+}
 @media (max-width: 576px) {
 .blog-article-1 .blog-article-1__article-grid {
-	padding: 0
+
 }
 }
