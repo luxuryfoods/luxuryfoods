@@ -34,7 +34,7 @@ section.news-style-1 .col-md-4 {
 section.news-style-1 .news-item a {
     display: flex;
 }
-section .news-style-1 .news-item img.image-size-scale {
+section #news-1 .row .news-item img.image-size-scale {
     width: 35% !important;
     height: 100% !important;
     aspect-ratio: 8 / 5;
