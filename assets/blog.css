@@ -13,7 +13,7 @@ section[layout="body"] > section + section {
 	position: sticky;
 	top: 100px;
 	overflow-y: auto;
-	height: 80vh
+	height: 90vh
 }
 section[layout="body"] section.news-style-1 .title {
 	text-align: left !important;
@@ -73,6 +73,7 @@ section.news-style-1 .single-line-hr {display: none !important;}
 section.news-style-1 .row {
     display: flex;
     flex-direction: column;
+	gap: 20px;
 }
 section.news-style-1 .col-md-4 {
     -ms-flex: 0 0 100%;
@@ -81,7 +82,9 @@ section.news-style-1 .col-md-4 {
 }
 section.news-style-1 .news-item a {
     display: flex;
-	gap: 12px
+	gap: 16px;
+	align-items: center;
+    justify-content: center;
 }
 section #news-1 .row .news-item img.image-size-scale {
     width: 35% !important;
