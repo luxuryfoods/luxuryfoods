@@ -46,9 +46,10 @@ section #news-1 .row .news-item .caption {
 	padding: 0 15px 0 0;
 }
 section .news-style-1 .caption .limit-1-line-text {
-    -webkit-line-clamp: 2!important
+    -webkit-line-clamp: 2 !important
+	margin-bottom: 0 !important;
 }
-section .news-style-1 .caption .creation-info {display: none !important}
+section .news-style-1 .caption :is( .creation-info, .featured-text ) {display: none !important}
 }
 
 section .blog-article-1__first-article {
