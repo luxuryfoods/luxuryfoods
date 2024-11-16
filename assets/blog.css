@@ -30,22 +30,22 @@ section.news-style-1 .col-md-4 {
     max-width: 100%;
 }
 
-.news-item {
+section.news-style-1 .news-item {
     display: flex; /* Sử dụng Flexbox để chia cột */
 }
 
-.image-size-scale {
+section.news-style-1 .image-size-scale {
     flex: 0 0 30%; /* Chiếm 30% chiều rộng */
     height: auto; /* Chiều cao tự động để giữ tỷ lệ */
 }
 
-.image-size-scale img {
+section.news-style-1 .image-size-scale img {
     width: 100%;
     height: auto;
     aspect-ratio: 16 / 9;
 }
 
-.caption {
+section.news-style-1 .caption {
     flex: 0 0 70%;
     padding: 20px;
 }
