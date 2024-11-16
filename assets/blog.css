@@ -33,20 +33,20 @@ section.news-style-1 .col-md-4 {
 section.news-style-1 .news-item a {
     display: flex;
 }
-section.news-style-1 .news-item img {
+section .news-style-1 .news-item img.image-size-scale {
     width: 35% !important;
     height: 100% !important;
     aspect-ratio: 8 / 5;
     object-fit: cover;
     border-radius: 5px;
 }
-section.news-style-1 .caption {
+section .news-style-1 .caption {
     width: 65%;
 }
-section.news-style-1 .caption .limit-1-line-text {
+section .news-style-1 .caption .limit-1-line-text {
     -webkit-line-clamp: 2!important
 }
-section.news-style-1 .caption .creation-info {display: none !important}
+section .news-style-1 .caption .creation-info {display: none !important}
 }
 
 section .blog-article-1__first-article {
