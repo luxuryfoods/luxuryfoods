@@ -1,0 +1,60 @@
+/* BLOG */
+@media (min-width: 1024px) {
+section[layout="body"] {
+    display: flex;
+	max-width: 1350px;
+	margin: auto
+}
+section[layout="body"] > section {
+    flex: 0 0 70%;
+}
+section[layout="body"] > section + section {
+    flex: 0 0 30%;
+	position: sticky;
+	top: 100px;
+	overflow-y: auto;
+	height: 90vh
+}
+section[layout="body"] section.news-style-1 .title {
+	text-align: left !important;
+	font-size: 28px !important;
+	margin: 0 12px 40px;
+}
+}
+section.news-style-1 .single-line-hr {display: none !important;}
+section.news-style-1 .row {
+    display: flex;
+    flex-direction: column;
+	gap: 20px;
+}
+section.news-style-1 .col-md-4 {
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+section.news-style-1 .news-item a {
+    display: flex;
+	gap: 16px;
+	align-items: center;
+    justify-content: center;
+}
+section #news-1 .row .news-item img.image-size-scale {
+    width: 35% !important;
+    height: 100% !important;
+    aspect-ratio: 8 / 5;
+    object-fit: cover;
+    border-radius: 5px;
+}
+section #news-1 .row .news-item .caption {
+    width: 65%;
+	padding: 0;
+}
+section #news-1 .row .news-item .caption .limit-1-line-text {
+    -webkit-line-clamp: 2 !important;
+	margin-bottom: 0 !important;
+}
+#news-1 .row .news-item.hover-effect:hover img {
+	transform: unset !important;
+    padding: 0 !important;
+}
+section .news-style-1 .caption :is( .creation-info, .featured-text ) {display: none !important}
