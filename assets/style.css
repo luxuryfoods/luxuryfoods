@@ -484,6 +484,20 @@ section#news-2 {
 
 
 /* BLOG */
+@media (min-width: 1024px) {
+section[layout="body"] {
+    display: flex;
+	max-width: 1350px;
+	margin: auto
+}
+section[layout="body"] > section {
+    flex: 0 0 70%;
+}
+section[layout="body"] > section + section {
+    flex: 0 0 30%;
+}
+}
+
 section .blog-article-1__first-article {
     row-gap: 10px;
 }
