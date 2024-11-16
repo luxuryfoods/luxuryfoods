@@ -518,7 +518,7 @@ section .blog-article-1 .blog-article-1__article-title {
 }
 }
 @media (max-width: 576px) {
-.blog-article-1 .blog-article-1__article-grid {
-
+section .blog-article-1 .box-cate {
+	display: flex;
 }
 }
