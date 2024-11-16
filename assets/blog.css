@@ -18,15 +18,13 @@ section[layout="body"] > section + section {
 section[layout="body"] section.news-style-1 .title {
 	text-align: left;
 	font-size: 28px;
+	margin-top: 32px;
 }
 section.news-style-1 .single-line-hr {display: none }
 section.news-style-1 .row {
     display: flex;
     flex-direction: column;
 }
-
-
-
 section.news-style-1 .col-md-4 {
     -ms-flex: 0 0 100%;
     flex: 0 0 100%;
