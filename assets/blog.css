@@ -15,6 +15,18 @@ section[layout="body"] > section + section {
 	height: 100vh;
 	overflow-y: auto;
 }
+section.news-style-1 .row {
+    display: flex;
+    flex-direction: column;
+}
+
+
+section.news-style-1 .ol-md-4 {
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+
 }
 
 section .blog-article-1__first-article {
