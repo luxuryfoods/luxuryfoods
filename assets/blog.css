@@ -43,7 +43,7 @@ section #news-1 .row .news-item img.image-size-scale {
 }
 section #news-1 .row .news-item .caption {
     width: 65%;
-	padding: 0 15px 0 0;
+	padding: 0 0 0 15px;
 }
 section .news-style-1 .caption .limit-1-line-text {
     -webkit-line-clamp: 2 !important
