@@ -73,6 +73,7 @@ section[id*="tm-menu-slider-layout-1"] {
 /* Product */
 .product-collection-list-4-wrapper .info .name .h3,
 .list-product-checkout-1 .collection .item .content .description,
+.blog-article-1__article-title,
 .text-2line {
     --line-clamp: 2;
     --line-height: 1.4;
@@ -505,9 +506,10 @@ section .blog-article-1 .blog-article-1__article-thumbnail {
     object-fit: cover;
 }
 section .blog-article-1 .blog-article-1__article-title {
+    --line-clamp: 2;
+    --line-height: 1.5;
+    --font-size: 18px;
     text-transform: capitalize;
-    font-size: 18px;
-    line-height: 1.5;
 }
 @media (max-width: 1024px) {
 .blog-article-1 .blog-article-1__article-grid {
