@@ -1,14 +1,13 @@
-        document.addEventListener('DOMContentLoaded', function() {
-            // Lấy tất cả các thẻ <p> trong tài liệu
-            const paragraphs = document.querySelectorAll('p');
-            let removedCount = 0; // Biến đếm số thẻ <p> đã xóa
+         $(document).ready(function() {
+            // Đếm số thẻ <p> đã xóa
+            let removedCount = 0;
 
-            // Duyệt qua từng thẻ <p>
-            paragraphs.forEach(paragraph => {
+            // Tìm tất cả các thẻ <p> trong #product-description
+            $('#product-description p').each(function() {
                 // Kiểm tra xem thẻ <p> có chứa nội dung hay không
-                if (paragraph.innerHTML.trim() === '' || paragraph.innerHTML.trim() === '<br>') {
+                if ($(this).html().trim() === '' || $(this).html().trim() === '<br>') {
                     // Nếu trống hoặc chỉ chứa <br>, xóa thẻ <p>
-                    paragraph.remove();
+                    $(this).remove();
                     removedCount++; // Tăng biến đếm
                 }
             });
