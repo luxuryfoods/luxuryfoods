@@ -9,8 +9,6 @@ $(window).on('load', function () {
         }
     });
 
-    $('#product-description p').css('margin-bottom', '1em');
-
     if (removedCount > 0) {
         console.log(`Đã xóa thành công ${removedCount} thẻ <p> trống.`);
     } else {
