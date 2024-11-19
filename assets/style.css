@@ -390,6 +390,9 @@ section#news-2 {
 	background: #fafafa;
 	overflow: hidden;
 }
+#product-review.product-review .item-information #product-description p {
+    margin-bottom: 1rem !important;
+}
 #product-detail #similar-product #similar-item-detail .product-box .center-image {
 	padding-top: 100%;
 }
