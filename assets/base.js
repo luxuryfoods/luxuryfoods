@@ -1,24 +1,16 @@
-        $(window).on('load', function() {
-            // Đếm số thẻ <p> đã xóa
+         $(window).on('load', function() {
             let removedCount = 0;
-
-            // Tìm tất cả các thẻ <p> trong #product-description
             $('#product-description p').each(function() {
-                // Kiểm tra xem thẻ <p> có chứa nội dung hay không
                 if ($(this).html().trim() === '' || $(this).html().trim() === '<br>') {
-                    // Nếu trống hoặc chỉ chứa <br>, xóa thẻ <p>
                     $(this).remove();
-                    removedCount++; // Tăng biến đếm
+                    removedCount++;
                 }
             });
 
-            // Thông báo kết quả
             if (removedCount > 0) {
                 console.log(`Đã xóa thành công ${removedCount} thẻ <p> trống.`);
-                alert(`Đã xóa thành công ${removedCount} thẻ <p> trống.`);
             } else {
                 console.log('Không có thẻ <p> nào bị xóa.');
-                alert('Không có thẻ <p> nào bị xóa.');
             }
         });
 		
