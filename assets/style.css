@@ -105,6 +105,13 @@ section[class*="product"] .collection .item {
 	overflow: hidden;
 	flex: 0 0 calc(var(--item-width) - var(--gap-collection));
 }
+.list-product-checkout-1 .item:nth-child(n+7) {
+	display: none !important;
+}
+@media (min-width: 992px) {
+.list-product-checkout-1 .item:nth-child(n+6) {
+    display: none !important;
+}
 @media (max-width: 767px) {
 	section[class*="product"] .collection {
 		--item-width: 50%;
@@ -256,7 +263,6 @@ section#news-2 {
 	box-shadow: unset !important;
 	border: 1px solid var(--border);
 }
-
 .list-category :is( .dropdown-item:focus, .dropdown-item:hover ) {
     background-color: unset;
 }
