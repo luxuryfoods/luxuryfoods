@@ -260,6 +260,12 @@ section#news-2 {
 .list-category :is( .dropdown-item:focus, .dropdown-item:hover ) {
     background-color: unset;
 }
+.list-category .dropdown-item {
+    text-transform: lowercase;
+}
+.list-category .dropdown-item:first-line {
+	text-transform: capitalize;
+}
 /* Order popup */
 .order-popup {
 	--width: 320px;
