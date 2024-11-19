@@ -392,7 +392,7 @@ section#news-2 {
 	overflow: hidden;
 }
 #product-review.product-review .item-information #product-description p {
-    margin-bottom: 1rem !important;
+    margin-bottom: 1em !important;
 }
 #product-detail #similar-product #similar-item-detail .product-box .center-image {
 	padding-top: 100%;
@@ -455,7 +455,8 @@ section#news-2 {
     display: none !important;
 }
 /* Article Page */
-.article-element p, .article-element ul li, .article-element ol li {
+.article-element p, .article-element ul li, .article-element ol li,
+#product-description p, #product-description ul li,#product-description ol li {
 	font-size: 18px;
 }
 /* Sidebar */
