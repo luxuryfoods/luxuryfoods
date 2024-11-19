@@ -1,4 +1,4 @@
-$(window).on('load', function () {
+$(document).ready(function () {
 	let removedCount = 0;
 	$('#product-description p').each(function () {
 		if ($(this).html().trim() === '' || $(this).html().trim() === '<br>') {
