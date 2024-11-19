@@ -455,7 +455,7 @@ section#news-2 {
     display: none !important;
 }
 /* Article Page */
-.article-element p, ul li, ol li {
+.article-element p, .article-element ul li, .article-element ol li {
 	font-size: 18px;
 }
 /* Sidebar */
