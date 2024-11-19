@@ -1,4 +1,4 @@
-         $(document).ready(function() {
+         $(window).on('load', function() {
             // Đếm số thẻ <p> đã xóa
             let removedCount = 0;
 
