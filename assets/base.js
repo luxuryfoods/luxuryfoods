@@ -1,19 +1,21 @@
 $(window).on('load', function () {
-	let removedCount = 0;
-	$('#product-description p').each(function () {
-		if ($(this).html().trim() === '' || $(this).html().trim() === '<br>') {
-			$(this).remove();
-			removedCount++;
-		}
-	});
-	
-	$('#product-description p').css('margin-bottom', '16px');
-	
-	if (removedCount > 0) {
-		console.log(`Đã xóa thành công ${removedCount} thẻ <p> trống.`);
-	} else {
-		console.log('Không có thẻ <p> nào bị xóa.');
-	}
+    let removedCount = 0;
+
+    $('#product-description p').each(function () {
+        const htmlContent = $(this).html().trim();
+        if (htmlContent === '' || htmlContent === '<br>' || htmlContent === '&nbsp;') {
+            $(this).remove();
+            removedCount++;
+        }
+    });
+
+    $('#product-description p').css('margin-bottom', '16px');
+
+    if (removedCount > 0) {
+        console.log(`Đã xóa thành công ${removedCount} thẻ <p> trống.`);
+    } else {
+        console.log('Không có thẻ <p> nào bị xóa.');
+    }
 });
 
 $(document).ready(function () {
