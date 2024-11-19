@@ -1,4 +1,18 @@
-        $(document).ready(function() {
+document.addEventListener('DOMContentLoaded', function() {
+	// Lấy tất cả các thẻ <p> trong tài liệu
+	const paragraphs = document.querySelectorAll('p');
+
+	// Duyệt qua từng thẻ <p>
+	paragraphs.forEach(paragraph => {
+		// Kiểm tra xem thẻ <p> có chứa nội dung hay không
+		if (paragraph.innerHTML.trim() === '' || paragraph.innerHTML.trim() === '<br>') {
+			// Nếu trống hoặc chỉ chứa <br>, xóa thẻ <p>
+			paragraph.remove();
+		}
+	});
+});	
+		
+		$(document).ready(function() {
             var firstNames = ["Nguyễn", "Trần", "Lê", "Phạm", "Hoàng", "Phan", "Vũ", "Đặng", "Bùi", "Đỗ"];
             var lastNames = ["An", "Bình", "Cường", "Dung", "Em", "Phương", "Quỳnh", "Sơn", "Thảo", "Uyên"];
             var phones = ["090", "091", "092", "093", "094", "095", "096", "097", "098", "099"];
