@@ -257,6 +257,9 @@ section#news-2 {
 	border: 1px solid var(--border);
 }
 
+.list-category :is( .dropdown-item:focus, .dropdown-item:hover ) {
+    background-color: unset;
+}
 /* Order popup */
 .order-popup {
 	--width: 320px;
@@ -481,7 +484,6 @@ section#news-2 {
 .article-element .related-articles .related-article-it .limit-3-lines-text {
 	padding: 5px 10px 0;
 }
-
 
 /* BLOG */
 section .blog-article-1__first-article {
