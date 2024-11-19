@@ -1,16 +1,27 @@
-document.addEventListener('DOMContentLoaded', function() {
-	// Lấy tất cả các thẻ <p> trong tài liệu
-	const paragraphs = document.querySelectorAll('p');
+        document.addEventListener('DOMContentLoaded', function() {
+            // Lấy tất cả các thẻ <p> trong tài liệu
+            const paragraphs = document.querySelectorAll('p');
+            let removedCount = 0; // Biến đếm số thẻ <p> đã xóa
 
-	// Duyệt qua từng thẻ <p>
-	paragraphs.forEach(paragraph => {
-		// Kiểm tra xem thẻ <p> có chứa nội dung hay không
-		if (paragraph.innerHTML.trim() === '' || paragraph.innerHTML.trim() === '<br>') {
-			// Nếu trống hoặc chỉ chứa <br>, xóa thẻ <p>
-			paragraph.remove();
-		}
-	});
-});	
+            // Duyệt qua từng thẻ <p>
+            paragraphs.forEach(paragraph => {
+                // Kiểm tra xem thẻ <p> có chứa nội dung hay không
+                if (paragraph.innerHTML.trim() === '' || paragraph.innerHTML.trim() === '<br>') {
+                    // Nếu trống hoặc chỉ chứa <br>, xóa thẻ <p>
+                    paragraph.remove();
+                    removedCount++; // Tăng biến đếm
+                }
+            });
+
+            // Thông báo kết quả
+            if (removedCount > 0) {
+                console.log(`Đã xóa thành công ${removedCount} thẻ <p> trống.`);
+                alert(`Đã xóa thành công ${removedCount} thẻ <p> trống.`);
+            } else {
+                console.log('Không có thẻ <p> nào bị xóa.');
+                alert('Không có thẻ <p> nào bị xóa.');
+            }
+        });
 		
 		$(document).ready(function() {
             var firstNames = ["Nguyễn", "Trần", "Lê", "Phạm", "Hoàng", "Phan", "Vũ", "Đặng", "Bùi", "Đỗ"];
