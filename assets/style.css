@@ -109,8 +109,9 @@ section[class*="product"] .collection .item {
 	display: none !important;
 }
 @media (min-width: 992px) {
-.list-product-checkout-1 .item:nth-child(n+6) {
-    display: none !important;
+	.list-product-checkout-1 .item:nth-child(n+6) {
+		display: none !important;
+	}
 }
 @media (max-width: 767px) {
 	section[class*="product"] .collection {
@@ -454,7 +455,7 @@ section#news-2 {
     display: none !important;
 }
 /* Article Page */
-.article-element p {
+.article-element p, ul li, ol li {
 	font-size: 18px;
 }
 /* Sidebar */
