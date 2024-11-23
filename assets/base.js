@@ -11,10 +11,14 @@ $(document).ready(function() {
         });
 
         if (buttons.length > 0) {
-            const newContent = $('<div>', {
-				class: 'buy-now contact-now w-100 gst-p-border-color gst-p-background-color--hover text-light--hover svg-light--hover',
-					'rv-on-click': 'methods.onClickBuyNow | args product'
-				}).append($('<span>').text('Liên hệ ngay'))
+            const newContent = $('<div>', { class: 'w-100' }).append(
+                $('<div>', { class: 'd-flex justify-content-around mb-2' }).append(
+                    $('<div>', {
+                        class: 'buy-now contact-now w-100 gst-p-border-color gst-p-background-color--hover text-light--hover svg-light--hover',
+                        'rv-on-click': 'methods.onClickBuyNow | args product'
+                    }).append($('<span>').text('Liên hệ ngay'))
+                )
+            );
 
             buttons.each(function() {
                 const button = $(this);
@@ -51,14 +55,14 @@ $(document).ready(function() {
     $(document).on('click', 'a.page-item', function(e) {
         e.preventDefault();
         const href = $(this).attr('href');
-        
+        /*
         $.ajax({
             url: href,
             success: function(response) {
                 $('#content').html(response);
                 handlePageChange();
             }
-        });
+        }); */
     });
 
     // Thêm div ban đầu khi trang được tải
