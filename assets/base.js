@@ -7,7 +7,9 @@ $(document).ready(function() {
         isProcessing = true;
 
         const buttons = $('.group-btn, .shopping-cart').filter(function() {
-            return ($(this).children().length === 0 || $(this).hasClass('disabled')) && $(this).find('.contact-now').length === 0;
+            return ($(this).children().length === 0 || $(this).hasClass('disabled')) && 
+                   ($(this).find('.contact-now').length === 0 || 
+                   ($(this).hasClass('shopping-cart') && $(this).find('.buy-now.disabled').length > 0));
         });
 
         if (buttons.length > 0) {
@@ -90,11 +92,6 @@ $(document).ready(function() {
     const config = { childList: true, subtree: true };
     observer.observe(document.body, config);
 });
-
-
-
-
-
 
 // Xử lý thẻ p rỗng
 $(window).on('load', function () {
