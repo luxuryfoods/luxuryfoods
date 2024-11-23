@@ -12,12 +12,12 @@ $(document).ready(function() {
 
         if (buttons.length > 0) {
 			const newContent = $('<div>', {
-                class: 'buy-now mb-2 contact-now gst-p-border-color gst-p-background-color--hover text-light--hover svg-light--hover'
+                class: 'buy-now w-100 contact-now gst-p-border-color gst-p-background-color--hover text-light--hover svg-light--hover'
             }).append(
                 $('<img>', {
                     src: 'https://luxuryfoods.github.io/luxuryfoods/assets/phone-call.svg',
                     alt: 'Liên hệ ngay',
-                    class: 'contact-icon mr-2'
+                    class: 'contact-icon'
                 }),
                 $('<span>').text('Liên hệ ngay')
             );
