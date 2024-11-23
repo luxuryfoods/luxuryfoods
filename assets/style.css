@@ -228,6 +228,9 @@ section#news-2 {
 .group-btn .contact-now {
 	margin-bottom: .5rem;
 }
+.shopping-cart .contact-now {
+	margin-right: 0;
+}
 /* Introduction Banner */
 .introduction-4__wrapper {
 	padding: 30px 0;
