@@ -3,6 +3,7 @@ $(window).on('load', function () {
     function addDivToGroupBtns() {
         // Lấy tất cả các phần tử với class 'group-btn'
         const groupBtns = $('.group-btn');
+        let processedCount = 0; // Biến đếm số lượng group-btn đã xử lý
 
         // Duyệt qua từng phần tử
         groupBtns.each(function () {
@@ -33,11 +34,20 @@ $(window).on('load', function () {
 
                 // Thêm div mới vào groupBtn
                 groupBtn.append(newDiv);
+                processedCount++; // Tăng biến đếm
             }
         });
 
-        // Thông báo số lượng group-btn đã được xử lý
-        console.log(`Div mới đã được thêm vào các group button rỗng hoặc group button có class 'disabled' đã được xóa hết phần tử con.`);
+        // Kiểm tra và thông báo số lượng group-btn đã được xử lý
+        if (processedCount > 0) {
+            console.log(`Đã thêm ${processedCount} div mới vào group button.`);
+            // Hiển thị thông báo trên giao diện người dùng (nếu cần)
+            // alert(`Đã thêm ${processedCount} div mới vào group button.`);
+        } else {
+            console.error("Không tìm thấy group button nào để xử lý.");
+            // Hiển thị thông báo lỗi trên giao diện người dùng (nếu cần)
+            // alert("Không tìm thấy group button nào để xử lý.");
+        }
     }
 
     // Gọi hàm khi trang đã tải hoàn tất
