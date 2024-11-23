@@ -221,6 +221,9 @@ section#news-2 {
   border-radius: 3px!important;
 }
 
+.group-btn .contact {
+	padding: 0 5px;
+}
 .contact-now {
 	width: 100%!important;
 	cursor: pointer;
