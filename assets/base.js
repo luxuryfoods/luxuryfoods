@@ -1,16 +1,23 @@
 $(window).on('load', function () {
-	// Lấy phần tử với class 'group-btn'
-	const groupBtn = document.querySelector('.group-btn');
+// Lấy tất cả các phần tử với class 'group-btn'
+const groupBtns = document.querySelectorAll('.group-btn');
 
-	// Đếm số lượng phần tử con
-	const childCount = groupBtn.childElementCount;
+// Đếm số lượng group-btn trống
+let emptyCount = 0;
 
-	// Đưa ra thông báo dựa trên số lượng phần tử con
-	if (childCount === 0) {
-		console.log('Group button is empty.');
-	} else {
-		console.log(`Group button has ${childCount} child(ren).`);
-	}
+// Duyệt qua từng phần tử và kiểm tra nếu nó trống
+groupBtns.forEach(groupBtn => {
+    if (groupBtn.childElementCount === 0) {
+        emptyCount++;
+    }
+});
+
+// Đưa ra thông báo
+if (emptyCount === 0) {
+    console.log('No empty group buttons found.');
+} else {
+    console.log(`Found ${emptyCount} empty group button(s).`);
+}
 
     let removedCount = 0;
     $('#product-description p').each(function () {
