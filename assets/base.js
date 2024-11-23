@@ -1,75 +1,79 @@
 $(document).ready(function() {
-    // Biến để theo dõi trạng thái đang xử lý
     let isProcessing = false;
+    let changeDetected = false;
 
-    // Hàm để thêm div mới vào các group-btn
     function addDivToGroupBtns() {
-        // Nếu đang xử lý, không thực hiện thêm
         if (isProcessing) return;
-
-        // Đánh dấu đang xử lý
         isProcessing = true;
 
-        // Lấy tất cả các phần tử với class 'group-btn'
         const groupBtns = $('.group-btn');
+        let changes = 0;
 
-        // Duyệt qua từng phần tử
         groupBtns.each(function() {
             const groupBtn = $(this);
-            // Kiểm tra nếu groupBtn rỗng hoặc có class 'disabled'
             if (groupBtn.children().length === 0 || groupBtn.hasClass('disabled')) {
-                // Nếu groupBtn có class 'disabled', xóa tất cả các phần tử con
                 if (groupBtn.hasClass('disabled')) {
                     groupBtn.empty();
                 }
 
-                // Kiểm tra xem đã có div.contact-now chưa
                 if (groupBtn.find('.contact-now').length === 0) {
-                    // Tạo div mới
                     const newDiv = $('<div>', {
                         class: 'contact-now gst-p-border-color gst-p-background-color--hover text-light--hover svg-light--hover',
                         'rv-on-click': 'methods.onClickBuyNow | args product'
                     });
 
-                    // Tạo span
                     const span = $('<span>').text('Liên hệ ngay');
-
-                    // Thêm span vào div mới
                     newDiv.append(span);
 
-                    // Thêm sự kiện click để mở link zalo.com
                     newDiv.on('click', function() {
                         window.open('https://zalo.com', '_blank');
                     });
 
-                    // Thêm div mới vào groupBtn
                     groupBtn.append(newDiv);
+                    changes++;
                 }
             }
         });
 
-        console.log('Div mới đã được thêm vào các group button rỗng hoặc group button có class "disabled".');
+        if (changes > 0) {
+            console.log(`Đã thêm ${changes} div mới vào các group button.`);
+        }
 
-        // Đánh dấu đã xử lý xong
         isProcessing = false;
+        changeDetected = false;
     }
 
-    // Hàm để xử lý sự kiện click trên thẻ a.page-item
     function handlePageItemClick() {
-        // Sử dụng setTimeout để đợi DOM được cập nhật
-        setTimeout(function() {
-            // Gọi hàm để thêm div vào các group-btn mới
-            addDivToGroupBtns();
-        }, 1000); // Đợi 1 giây sau khi click
+        changeDetected = true;
+        checkForChanges();
     }
 
-    // Gọi hàm khi trang đã tải hoàn tất
+    function checkForChanges() {
+        if (changeDetected) {
+            setTimeout(function() {
+                addDivToGroupBtns();
+                if (changeDetected) {
+                    checkForChanges();
+                }
+            }, 500);
+        }
+    }
+
     $(window).on('load', addDivToGroupBtns);
 
-    // Thêm sự kiện click cho các thẻ a có class 'page-item'
     $(document).on('click', 'a.page-item', handlePageItemClick);
-});
 
+    // Theo dõi thay đổi DOM
+    const observer = new MutationObserver(function(mutations) {
+        if (!isProcessing && !changeDetected) {
+            changeDetected = true;
+            checkForChanges();
+        }
+    });
+
+    const config = { childList: true, subtree: true };
+    observer.observe(document.body, config);
+});
 
 
 
