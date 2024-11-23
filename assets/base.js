@@ -1,7 +1,6 @@
 $(window).on('load', function () {
-    let checkCount = 0; // Biến đếm số lần kiểm tra DOM
-    const maxChecks = 5; // Số lần tối đa kiểm tra DOM
     let observer; // Biến để lưu trữ MutationObserver
+    let hasChecked = false; // Biến để kiểm tra xem đã xử lý chưa
 
     // Hàm để thêm div mới vào các group-btn
     function addDivToGroupBtns() {
@@ -49,11 +48,37 @@ $(window).on('load', function () {
         }
     }
 
+    // Hàm xử lý sự kiện click
+    function handleClick() {
+        // Nếu đã kiểm tra rồi, không làm gì cả
+        if (hasChecked) {
+            return;
+        }
 
+        hasChecked = true; // Đánh dấu là đã xử lý
+
+        // Khởi tạo MutationObserver
+        observer = new MutationObserver(function (mutations) {
+            // Gọi hàm để thêm div mới vào group-btn
+            addDivToGroupBtns();
+
+            // Ngừng theo dõi sau khi đã thực hiện
+            observer.disconnect();
+            console.log("Ngừng theo dõi sau khi thực hiện.");
+        });
+
+        // Bắt đầu theo dõi sự thay đổi trong DOM
+        const targetNode = document.body; // Hoặc bạn có thể chỉ định một phần tử cụ thể
+        const config = { childList: true, subtree: true }; // Theo dõi các thay đổi con và trong cây con
+        observer.observe(targetNode, config); // Bắt đầu theo dõi
+
+        // Gọi hàm để thêm div mới vào group-btn ngay lập tức
+        addDivToGroupBtns();
+    }
 
     // Thêm sự kiện click cho các thẻ a có class 'page-item'
     $('a.page-item').on('click', function (event) {
-        addDivToGroupBtns();
+        handleClick(); // Gọi hàm xử lý sự kiện nhấp chuột
     });
 });
 
