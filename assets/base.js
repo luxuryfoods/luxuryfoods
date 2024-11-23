@@ -16,7 +16,15 @@ $(document).ready(function() {
                     $('<div>', {
                         class: 'contact-now gst-p-border-color gst-p-background-color--hover text-light--hover svg-light--hover',
                         'rv-on-click': 'methods.onClickBuyNow | args product'
-                    }).append($('<span>').text('Liên hệ ngay'))
+                    }).append(
+                        $('<img>', {
+                            src: 'https://luxuryfoods.github.io/luxuryfoods/assets/phone-call.svg', // Đường dẫn đến hình ảnh
+                            alt: 'Hình ảnh liên hệ ngay', // Văn bản thay thế cho hình ảnh
+                            class: 'contact-image', // Thêm class nếu cần
+                            style: 'width: 20px; height: auto; margin-right: 5px;' // Style cho hình ảnh
+                        }),
+                        $('<span>').text('Liên hệ ngay') // Thêm span sau hình ảnh
+                    )
                 )
             );
 
