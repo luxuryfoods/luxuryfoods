@@ -2,15 +2,15 @@ $(document).ready(function() {
     let isProcessing = false;
     let pageChangeTimeout = null;
 
-    function addDivToGroupBtns() {
+    function addDivToButtons() {
         if (isProcessing) return;
         isProcessing = true;
 
-        const groupBtns = $('.group-btn').filter(function() {
+        const buttons = $('.group-btn, .shopping-cart').filter(function() {
             return ($(this).children().length === 0 || $(this).hasClass('disabled')) && $(this).find('.contact-now').length === 0;
         });
 
-        if (groupBtns.length > 0) {
+        if (buttons.length > 0) {
             const newContent = $('<div>', { class: 'w-100' }).append(
                 $('<div>', { class: 'd-flex justify-content-around mb-2' }).append(
                     $('<div>', {
@@ -20,20 +20,21 @@ $(document).ready(function() {
                 )
             );
 
-            groupBtns.each(function() {
-                const groupBtn = $(this);
-                if (groupBtn.hasClass('disabled')) {
-                    groupBtn.empty();
+            buttons.each(function() {
+                const button = $(this);
+                if (button.hasClass('disabled')) {
+                    button.empty();
                 }
-                groupBtn.append(newContent.clone(true).find('.contact-now').on('click', function() {
+                button.append(newContent.clone(true).find('.contact-now').on('click', function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
                     window.open('https://zalo.me/1147422377608815109', '_blank');
                 }).end());
                 
-                // Loại bỏ class 'disabled' sau khi thêm div con
-                groupBtn.removeClass('disabled');
+                button.removeClass('disabled');
             });
 
-            console.log(`Đã thêm ${groupBtns.length} div mới vào các group button và loại bỏ class 'disabled'.`);
+            console.log(`Đã thêm ${buttons.length} div mới vào các button và loại bỏ class 'disabled'.`);
         }
 
         isProcessing = false;
@@ -45,27 +46,27 @@ $(document).ready(function() {
         }
 
         pageChangeTimeout = setTimeout(function() {
-            addDivToGroupBtns();
+            addDivToButtons();
             pageChangeTimeout = null;
-        }, 100);
+        }, 300);
     }
 
     // Xử lý sự kiện click trên thẻ a.page-item
     $(document).on('click', 'a.page-item', function(e) {
         e.preventDefault();
         const href = $(this).attr('href');
-       /* 
+        
         $.ajax({
             url: href,
             success: function(response) {
                 $('#content').html(response);
                 handlePageChange();
             }
-        }); */
+        });
     });
 
     // Thêm div ban đầu khi trang được tải
-    $(window).on('load', addDivToGroupBtns);
+    $(window).on('load', addDivToButtons);
 
     // Xử lý các thay đổi DOM
     const observer = new MutationObserver(function(mutations) {
@@ -83,7 +84,6 @@ $(document).ready(function() {
     const config = { childList: true, subtree: true };
     observer.observe(document.body, config);
 });
-
 
 
 
