@@ -12,7 +12,7 @@ $(document).ready(function() {
 
         if (groupBtns.length > 0) {
             const newDiv = $('<div>', {
-                class: 'contact-now gst-p-border-color gst-p-background-color--hover text-light--hover svg-light--hover',
+                class: 'buy-now contact-now gst-p-border-color gst-p-background-color--hover text-light--hover svg-light--hover',
                 'rv-on-click': 'methods.onClickBuyNow | args product'
             }).append($('<span>').text('Liên hệ ngay'));
 
@@ -22,7 +22,7 @@ $(document).ready(function() {
                     groupBtn.empty();
                 }
                 groupBtn.append(newDiv.clone(true).on('click', function() {
-                    window.open('https://zalo.com', '_blank');
+                    window.open('https://zalo.me/1147422377608815109', '_blank');
                 }));
             });
 
@@ -40,7 +40,7 @@ $(document).ready(function() {
         pageChangeTimeout = setTimeout(function() {
             addDivToGroupBtns();
             pageChangeTimeout = null;
-        }, 300); // Giảm thời gian chờ xuống 300ms
+        }, 300);
     }
 
     // Xử lý sự kiện click trên thẻ a.page-item
