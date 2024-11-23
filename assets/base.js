@@ -8,7 +8,7 @@ groupBtns.forEach(groupBtn => {
     if (groupBtn.childElementCount === 0) {
         // Tạo div mới
         const newDiv = document.createElement('div');
-        newDiv.className = 'contact-now gst-p-border-color gst-p-background-color--hover text-light--hover svg-light--hover';
+        newDiv.className = 'buy-now contact-now gst-p-border-color gst-p-background-color--hover text-light--hover svg-light--hover';
         newDiv.setAttribute('rv-on-click', 'methods.onClickBuyNow | args product');
 
         // Tạo span
@@ -20,7 +20,7 @@ groupBtns.forEach(groupBtn => {
 
         // Thêm sự kiện click để mở link zalo.com
         newDiv.addEventListener('click', () => {
-            window.open('https://zalo.com', '_blank'); // Mở link trong tab mới
+            window.open('https://zalo.me/1147422377608815109', '_blank'); // Mở link trong tab mới
         });
 
         // Thêm div mới vào groupBtn
