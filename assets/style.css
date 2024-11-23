@@ -220,8 +220,13 @@ section#news-2 {
   border: 1px solid var(--primary, #8b0000);
   border-radius: 3px!important;
 }
+
 .contact-now {
 	width: 100%!important;
+	cursor: pointer;
+}
+.group-btn .contact-now {
+	margin-bottom: 2px;
 }
 /* Introduction Banner */
 .introduction-4__wrapper {
