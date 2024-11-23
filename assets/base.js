@@ -27,11 +27,11 @@ $(document).ready(function() {
 					$('<span>').text('Liên hệ ngay')
 				)
 			);
-
+			
             buttons.each(function() {
                 const button = $(this);
-                if (button.hasClass('disabled')) {
-                    button.empty();
+                if (button.hasClass('shopping-cart') && button.find('.buy-now.disabled').length > 0 || button.hasClass('disabled')) {
+                    button.empty(); // Xóa toàn bộ nội dung
                 }
                 button.append(newContent.clone(true).on('click', function(e) {
                     e.preventDefault();
