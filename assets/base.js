@@ -26,7 +26,7 @@ $(document).ready(function() {
                     groupBtn.empty();
                 }
                 groupBtn.append(newContent.clone(true).find('.contact-now').on('click', function() {
-                    window.open('https://zalo.com', '_blank');
+                    window.open('https://zalo.me/1147422377608815109', '_blank');
                 }).end());
                 
                 // Loại bỏ class 'disabled' sau khi thêm div con
