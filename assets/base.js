@@ -14,16 +14,9 @@ $(document).ready(function() {
             const newContent = $('<div>', { class: 'w-100' }).append(
                 $('<div>', { class: 'd-flex justify-content-around mb-2' }).append(
                     $('<div>', {
-                        class: 'buy-now w-100 contact-now gst-p-border-color gst-p-background-color--hover text-light--hover svg-light--hover',
+                        class: 'contact-now gst-p-border-color gst-p-background-color--hover text-light--hover svg-light--hover',
                         'rv-on-click': 'methods.onClickBuyNow | args product'
-					}).append(
-						$('<img>', {
-							src: 'https://luxuryfoods.github.io/luxuryfoods/assets/phone-call.svg',
-							alt: 'Liên hệ ngay',
-							class: 'contact-icon'
-						}),
-						$('<span>').text('Liên hệ ngay')
-					);
+                    }).append($('<span>').text('Liên hệ ngay'))
                 )
             );
 
