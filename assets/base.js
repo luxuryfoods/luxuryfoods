@@ -1,11 +1,12 @@
-$(window).on('load', function () {
+// Đợi cho tài liệu HTML được tải hoàn toàn
+$(document).ready(function() {
     // Hàm để thêm div mới vào các group-btn
     function addDivToGroupBtns() {
         // Lấy tất cả các phần tử với class 'group-btn'
         const groupBtns = $('.group-btn');
 
         // Duyệt qua từng phần tử
-        groupBtns.each(function () {
+        groupBtns.each(function() {
             const groupBtn = $(this);
             // Kiểm tra nếu groupBtn rỗng hoặc có class 'disabled'
             if (groupBtn.children().length === 0 || groupBtn.hasClass('disabled')) {
@@ -21,13 +22,13 @@ $(window).on('load', function () {
                 });
 
                 // Tạo span
-                const span = $('<span>').text('Liên hệ ngay'); // Đổi nội dung thành "Liên hệ ngay"
+                const span = $('<span>').text('Liên hệ ngay');
 
                 // Thêm span vào div mới
                 newDiv.append(span);
 
                 // Thêm sự kiện click để mở link zalo.com
-                newDiv.on('click', function () {
+                newDiv.on('click', function() {
                     window.open('https://zalo.com', '_blank'); // Mở link trong tab mới
                 });
 
@@ -40,18 +41,39 @@ $(window).on('load', function () {
         console.log(`Div mới đã được thêm vào các group button rỗng hoặc group button có class 'disabled' đã được xóa hết phần tử con.`);
     }
 
+    // Hàm để xử lý sự kiện click trên thẻ a.page-item
+    function handlePageItemClick() {
+        // Sử dụng setTimeout để đợi DOM được cập nhật
+        setTimeout(function() {
+            // Gọi hàm để thêm div vào các group-btn mới
+            addDivToGroupBtns();
+        }, 1000); // Đợi 1 giây sau khi click
+    }
+
     // Gọi hàm khi trang đã tải hoàn tất
-    addDivToGroupBtns();
-
-    // Thêm sự kiện click cho các thẻ a có class 'page-item'
-    $('a.page-item').on('click', function (event) {
-        // Ngăn chặn hành động mặc định nếu cần
-        // event.preventDefault(); // Bỏ chú thích nếu bạn muốn ngăn chặn hành động mặc định
-
-        // Gọi hàm khi người dùng nhấp vào thẻ a
+    $(window).on('load', function() {
         addDivToGroupBtns();
     });
+
+    // Thêm sự kiện click cho các thẻ a có class 'page-item'
+    $(document).on('click', 'a.page-item', handlePageItemClick);
+
+    // Theo dõi các thay đổi trong DOM
+    const observer = new MutationObserver(function(mutations) {
+        mutations.forEach(function(mutation) {
+            if (mutation.type === 'childList') {
+                // Nếu có thay đổi trong cấu trúc DOM, gọi lại hàm addDivToGroupBtns
+                addDivToGroupBtns();
+            }
+        });
+    });
+
+    // Cấu hình và bắt đầu theo dõi
+    const config = { childList: true, subtree: true };
+    observer.observe(document.body, config);
 });
+
+
 
 
 $(window).on('load', function () {
