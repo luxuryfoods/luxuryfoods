@@ -7,9 +7,9 @@ $(document).ready(function() {
         isProcessing = true;
 
         const buttons = $('.group-btn, .shopping-cart').filter(function() {
+            const hasDisabledBuyNow = $(this).hasClass('shopping-cart') && $(this).find('.buy-now.disabled').length > 0;
             return ($(this).children().length === 0 || $(this).hasClass('disabled')) && 
-                   ($(this).find('.contact-now').length === 0 || 
-                   ($(this).hasClass('shopping-cart') && $(this).find('.buy-now.disabled').length > 0));
+                   $(this).find('.contact-now').length === 0 || hasDisabledBuyNow;
         });
 
         if (buttons.length > 0) {
