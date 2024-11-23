@@ -11,19 +11,23 @@ $(document).ready(function() {
         });
 
         if (groupBtns.length > 0) {
-            const newDiv = $('<div>', {
-                class: 'buy-now contact-now gst-p-border-color gst-p-background-color--hover text-light--hover svg-light--hover',
-                'rv-on-click': 'methods.onClickBuyNow | args product'
-            }).append($('<span>').text('Liên hệ ngay'));
+            const newContent = $('<div>', { class: 'w-100' }).append(
+                $('<div>', { class: 'd-flex justify-content-around mb-2' }).append(
+                    $('<div>', {
+                        class: 'buy-now contact-now gst-p-border-color gst-p-background-color--hover text-light--hover svg-light--hover',
+                        'rv-on-click': 'methods.onClickBuyNow | args product'
+                    }).append($('<span>').text('Liên hệ ngay'))
+                )
+            );
 
             groupBtns.each(function() {
                 const groupBtn = $(this);
                 if (groupBtn.hasClass('disabled')) {
                     groupBtn.empty();
                 }
-                groupBtn.append(newDiv.clone(true).on('click', function() {
+                groupBtn.append(newContent.clone(true).find('.contact-now').on('click', function() {
                     window.open('https://zalo.me/1147422377608815109', '_blank');
-                }));
+                }).end());
             });
 
             console.log(`Đã thêm ${groupBtns.length} div mới vào các group button.`);
@@ -47,6 +51,14 @@ $(document).ready(function() {
     $(document).on('click', 'a.page-item', function(e) {
         e.preventDefault();
         const href = $(this).attr('href');
+        
+        $.ajax({
+            url: href,
+            success: function(response) {
+                $('#content').html(response);
+                handlePageChange();
+            }
+        });
     });
 
     // Thêm div ban đầu khi trang được tải
@@ -68,6 +80,8 @@ $(document).ready(function() {
     const config = { childList: true, subtree: true };
     observer.observe(document.body, config);
 });
+
+
 
 // Xử lý thẻ p rỗng
 $(window).on('load', function () {
