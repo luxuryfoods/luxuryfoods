@@ -1,7 +1,6 @@
 $(window).on('load', function () {
     // Hàm để thêm div mới vào các group-btn
     function addDivToGroupBtns() {
-        // Lấy tất cả các phần tử với class 'group-btn'
         const groupBtns = $('.group-btn');
         let processedCount = 0; // Biến đếm số lượng group-btn đã xử lý
 
@@ -41,40 +40,16 @@ $(window).on('load', function () {
         // Kiểm tra và thông báo số lượng group-btn đã được xử lý
         if (processedCount > 0) {
             console.log(`Đã thêm ${processedCount} div mới vào group button.`);
-            // Hiển thị thông báo trên giao diện người dùng (nếu cần)
-            // alert(`Đã thêm ${processedCount} div mới vào group button.`);
         } else {
             console.error("Không tìm thấy group button nào để xử lý.");
-            // Hiển thị thông báo lỗi trên giao diện người dùng (nếu cần)
-            // alert("Không tìm thấy group button nào để xử lý.");
         }
     }
-
-    // Gọi hàm khi trang đã tải hoàn tất
-    addDivToGroupBtns();
 
     // Thêm sự kiện click cho các thẻ a có class 'page-item'
     $('a.page-item').on('click', function (event) {
         // Gọi hàm khi người dùng nhấp vào thẻ a
         addDivToGroupBtns();
     });
-
-    // Sử dụng MutationObserver để theo dõi sự thay đổi trong DOM
-    const observer = new MutationObserver(function (mutations) {
-        mutations.forEach(function (mutation) {
-            if (mutation.type === 'childList') {
-                // Gọi hàm khi có sự thay đổi trong DOM
-                addDivToGroupBtns();
-            }
-        });
-    });
-
-    // Theo dõi sự thay đổi trong body hoặc phần tử chứa các group-btn
-    const targetNode = document.body; // Hoặc bạn có thể chỉ định một phần tử cụ thể
-    const config = { childList: true, subtree: true }; // Theo dõi các thay đổi con và trong cây con
-
-    // Bắt đầu theo dõi
-    observer.observe(targetNode, config);
 });
 
 
