@@ -47,11 +47,11 @@ $(window).on('load', function () {
 
     // Khởi tạo MutationObserver
     const observer = new MutationObserver(function (mutations) {
-        mutations.forEach(function (mutation) {
-            if (mutation.type === 'childList') {
-                addDivToGroupBtns(); // Gọi hàm khi có sự thay đổi trong DOM
-            }
-        });
+        // Ngừng theo dõi ngay sau khi có sự thay đổi
+        observer.disconnect(); // Ngừng theo dõi
+
+        // Gọi hàm để thêm div mới vào group-btn
+        addDivToGroupBtns();
     });
 
     // Thêm sự kiện click cho các thẻ a có class 'page-item'
@@ -60,9 +60,6 @@ $(window).on('load', function () {
         const targetNode = document.body; // Hoặc bạn có thể chỉ định một phần tử cụ thể
         const config = { childList: true, subtree: true }; // Theo dõi các thay đổi con và trong cây con
         observer.observe(targetNode, config); // Bắt đầu theo dõi
-
-        // Gọi hàm để thêm div mới vào group-btn
-        addDivToGroupBtns();
     });
 });
 
