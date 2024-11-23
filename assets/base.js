@@ -1,6 +1,18 @@
 $(window).on('load', function () {
-    let removedCount = 0;
+	// Lấy phần tử với class 'group-btn'
+	const groupBtn = document.querySelector('.group-btn');
 
+	// Đếm số lượng phần tử con
+	const childCount = groupBtn.childElementCount;
+
+	// Đưa ra thông báo dựa trên số lượng phần tử con
+	if (childCount === 0) {
+		console.log('Group button is empty.');
+	} else {
+		console.log(`Group button has ${childCount} child(ren).`);
+	}
+
+    let removedCount = 0;
     $('#product-description p').each(function () {
         const htmlContent = $(this).html().trim();
         if (htmlContent === '' || htmlContent === '<br>' || htmlContent === '&nbsp;') {
@@ -8,7 +20,6 @@ $(window).on('load', function () {
             removedCount++;
         }
     });
-
     $('#product-description p').css('margin-bottom', '1em');
 
     if (removedCount > 0) {
@@ -17,19 +28,6 @@ $(window).on('load', function () {
         console.log('Không có thẻ <p> nào bị xóa.');
     }
 });
-
-// Lấy phần tử với class 'group-btn'
-const groupBtn = document.querySelector('.group-btn');
-
-// Đếm số lượng phần tử con
-const childCount = groupBtn.childElementCount;
-
-// Đưa ra thông báo dựa trên số lượng phần tử con
-if (childCount === 0) {
-    console.log('Group button is empty.');
-} else {
-    console.log(`Group button has ${childCount} child(ren).`);
-}
 
 $(document).ready(function () {
 	var firstNames = ["Nguyễn", "Trần", "Lê", "Phạm", "Hoàng", "Phan", "Vũ", "Đặng", "Bùi", "Đỗ"];
