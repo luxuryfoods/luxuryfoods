@@ -69,14 +69,7 @@ $(document).ready(function() {
     observer.observe(document.body, config);
 });
 
-
-
-
-
-
-
-
-
+// Xử lý thẻ p rỗng
 $(window).on('load', function () {
     let removedCount = 0;
     $('#product-description p').each(function () {
