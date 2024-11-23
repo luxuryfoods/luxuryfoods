@@ -8,29 +8,31 @@ groupBtns.forEach(groupBtn => {
     if (groupBtn.childElementCount === 0) {
         // Tạo div mới
         const newDiv = document.createElement('div');
-        newDiv.className = 'buy-now gst-p-border-color gst-p-background-color--hover text-light--hover svg-light--hover';
+        newDiv.className = 'contact-now gst-p-border-color gst-p-background-color--hover text-light--hover svg-light--hover';
         newDiv.setAttribute('rv-on-click', 'methods.onClickBuyNow | args product');
-
-        // Tạo hình ảnh
-        const img = document.createElement('img');
-        img.width = 16;
-        img.height = 16;
-        img.src = 'https://ssr-resource-prod.gosell.vn/images/empty-wallet.svg';
-        img.alt = '';
-        img.loading = 'lazy';
 
         // Tạo span
         const span = document.createElement('span');
-        span.textContent = 'Liên hệ';
+        span.textContent = 'Liên hệ ngay'; // Đổi nội dung thành "Liên hệ ngay"
 
-        // Thêm hình ảnh và span vào div mới
-        newDiv.appendChild(img);
+        // Thêm span vào div mới
         newDiv.appendChild(span);
+
+        // Thêm sự kiện click để mở link zalo.com
+        newDiv.addEventListener('click', () => {
+            window.open('https://zalo.com', '_blank'); // Mở link trong tab mới
+        });
 
         // Thêm div mới vào groupBtn
         groupBtn.appendChild(newDiv);
     }
 });
+
+// Thông báo số lượng group-btn trống đã được thêm div mới
+console.log(`Div mới đã được thêm vào tất cả các group button trống.`);
+
+// Thông báo số lượng group-btn trống đã được thêm div mới
+console.log(`Div mới đã được thêm vào tất cả các group button trống.`);
 
 // Thông báo số lượng group-btn trống đã được thêm div mới
 console.log(`Div mới đã được thêm vào tất cả các group button trống.`);
