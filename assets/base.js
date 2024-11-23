@@ -26,11 +26,14 @@ $(document).ready(function() {
                     groupBtn.empty();
                 }
                 groupBtn.append(newContent.clone(true).find('.contact-now').on('click', function() {
-                    window.open('https://zalo.me/1147422377608815109', '_blank');
+                    window.open('https://zalo.com', '_blank');
                 }).end());
+                
+                // Loại bỏ class 'disabled' sau khi thêm div con
+                groupBtn.removeClass('disabled');
             });
 
-            console.log(`Đã thêm ${groupBtns.length} div mới vào các group button.`);
+            console.log(`Đã thêm ${groupBtns.length} div mới vào các group button và loại bỏ class 'disabled'.`);
         }
 
         isProcessing = false;
@@ -51,14 +54,14 @@ $(document).ready(function() {
     $(document).on('click', 'a.page-item', function(e) {
         e.preventDefault();
         const href = $(this).attr('href');
-        
+       /* 
         $.ajax({
             url: href,
             success: function(response) {
                 $('#content').html(response);
                 handlePageChange();
             }
-        });
+        }); */
     });
 
     // Thêm div ban đầu khi trang được tải
@@ -80,6 +83,8 @@ $(document).ready(function() {
     const config = { childList: true, subtree: true };
     observer.observe(document.body, config);
 });
+
+
 
 
 
