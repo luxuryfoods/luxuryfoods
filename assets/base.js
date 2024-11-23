@@ -45,12 +45,26 @@ $(window).on('load', function () {
 
     // Thêm sự kiện click cho các thẻ a có class 'page-item'
     $('a.page-item').on('click', function (event) {
-        // Ngăn chặn hành động mặc định nếu cần
-        // event.preventDefault(); // Bỏ chú thích nếu bạn muốn ngăn chặn hành động mặc định
-
         // Gọi hàm khi người dùng nhấp vào thẻ a
         addDivToGroupBtns();
     });
+
+    // Sử dụng MutationObserver để theo dõi sự thay đổi trong DOM
+    const observer = new MutationObserver(function (mutations) {
+        mutations.forEach(function (mutation) {
+            if (mutation.type === 'childList') {
+                // Gọi hàm khi có sự thay đổi trong DOM
+                addDivToGroupBtns();
+            }
+        });
+    });
+
+    // Theo dõi sự thay đổi trong body hoặc phần tử chứa các group-btn
+    const targetNode = document.body; // Hoặc bạn có thể chỉ định một phần tử cụ thể
+    const config = { childList: true, subtree: true }; // Theo dõi các thay đổi con và trong cây con
+
+    // Bắt đầu theo dõi
+    observer.observe(targetNode, config);
 });
 
 
