@@ -1,41 +1,64 @@
-$(window).on('load', function () {
-// Lấy tất cả các phần tử với class 'group-btn'
-const groupBtns = document.querySelectorAll('.group-btn');
+// Hàm để thêm div mới vào các group-btn
+function addDivToGroupBtns() {
+    // Lấy tất cả các phần tử với class 'group-btn'
+    const groupBtns = document.querySelectorAll('.group-btn');
 
-// Duyệt qua từng phần tử
-groupBtns.forEach(groupBtn => {
-    // Kiểm tra nếu groupBtn rỗng hoặc có class 'disabled'
-    if (groupBtn.childElementCount === 0 || groupBtn.classList.contains('disabled')) {
-        // Nếu groupBtn có class 'disabled', xóa tất cả các phần tử con
-        if (groupBtn.classList.contains('disabled')) {
-            while (groupBtn.firstChild) {
-                groupBtn.removeChild(groupBtn.firstChild);
+    // Duyệt qua từng phần tử
+    groupBtns.forEach(groupBtn => {
+        // Kiểm tra nếu groupBtn rỗng hoặc có class 'disabled'
+        if (groupBtn.childElementCount === 0 || groupBtn.classList.contains('disabled')) {
+            // Nếu groupBtn có class 'disabled', xóa tất cả các phần tử con
+            if (groupBtn.classList.contains('disabled')) {
+                while (groupBtn.firstChild) {
+                    groupBtn.removeChild(groupBtn.firstChild);
+                }
             }
+
+            // Tạo div mới
+            const newDiv = document.createElement('div');
+            newDiv.className = 'buy-now contact-now gst-p-border-color gst-p-background-color--hover text-light--hover svg-light--hover';
+            newDiv.setAttribute('rv-on-click', 'methods.onClickBuyNow | args product');
+
+            // Tạo span
+            const span = document.createElement('span');
+            span.textContent = 'Liên hệ ngay'; // Đổi nội dung thành "Liên hệ ngay"
+
+            // Thêm span vào div mới
+            newDiv.appendChild(span);
+
+            // Thêm sự kiện click để mở link zalo.com
+            newDiv.addEventListener('click', () => {
+                window.open('https://zalo.com', '_blank'); // Mở link trong tab mới
+            });
+
+            // Thêm div mới vào groupBtn
+            groupBtn.appendChild(newDiv);
         }
+    });
 
-        // Tạo div mới
-        const newDiv = document.createElement('div');
-        newDiv.className = 'buy-now contact-now gst-p-border-color gst-p-background-color--hover text-light--hover svg-light--hover';
-        newDiv.setAttribute('rv-on-click', 'methods.onClickBuyNow | args product');
+    // Thông báo số lượng group-btn đã được xử lý
+    console.log(`Div mới đã được thêm vào các group button rỗng hoặc group button có class 'disabled' đã được xóa hết phần tử con.`);
+}
 
-        // Tạo span
-        const span = document.createElement('span');
-        span.textContent = 'Liên hệ ngay'; // Đổi nội dung thành "Liên hệ ngay"
+// Chạy hàm khi trang đã tải hoàn tất
+document.addEventListener('DOMContentLoaded', () => {
+    addDivToGroupBtns(); // Gọi hàm khi trang đã tải
 
-        // Thêm span vào div mới
-        newDiv.appendChild(span);
+    // Thêm sự kiện click cho các thẻ a có class 'page-item'
+    const pageItems = document.querySelectorAll('a.page-item');
+    pageItems.forEach(item => {
+        item.addEventListener('click', (event) => {
+            // Ngăn chặn hành động mặc định nếu cần
+            // event.preventDefault(); // Bỏ chú thích nếu bạn muốn ngăn chặn hành động mặc định
 
-        // Thêm sự kiện click để mở link zalo.com
-        newDiv.addEventListener('click', () => {
-            window.open('https://zalo.com', '_blank'); // Mở link trong tab mới
+            // Gọi hàm khi người dùng nhấp vào thẻ a
+            addDivToGroupBtns();
         });
+    });
+});
 
-        // Thêm div mới vào groupBtn
-        groupBtn.appendChild(newDiv);
-    }
-});	
 
-	
+$(window).on('load', function () {
     let removedCount = 0;
     $('#product-description p').each(function () {
         const htmlContent = $(this).html().trim();
