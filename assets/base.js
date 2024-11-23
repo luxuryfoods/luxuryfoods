@@ -6,35 +6,27 @@ $(document).ready(function() {
         if (isProcessing) return;
         isProcessing = true;
 
-        const groupBtns = $('.group-btn');
-        let changes = 0;
+        const groupBtns = $('.group-btn').filter(function() {
+            return ($(this).children().length === 0 || $(this).hasClass('disabled')) && $(this).find('.contact-now').length === 0;
+        });
 
-        groupBtns.each(function() {
-            const groupBtn = $(this);
-            if ((groupBtn.children().length === 0 || groupBtn.hasClass('disabled')) && groupBtn.find('.contact-now').length === 0) {
+        if (groupBtns.length > 0) {
+            const newDiv = $('<div>', {
+                class: 'contact-now gst-p-border-color gst-p-background-color--hover text-light--hover svg-light--hover',
+                'rv-on-click': 'methods.onClickBuyNow | args product'
+            }).append($('<span>').text('Liên hệ ngay'));
+
+            groupBtns.each(function() {
+                const groupBtn = $(this);
                 if (groupBtn.hasClass('disabled')) {
                     groupBtn.empty();
                 }
-
-                const newDiv = $('<div>', {
-                    class: 'contact-now gst-p-border-color gst-p-background-color--hover text-light--hover svg-light--hover',
-                    'rv-on-click': 'methods.onClickBuyNow | args product'
-                });
-
-                const span = $('<span>').text('Liên hệ ngay');
-                newDiv.append(span);
-
-                newDiv.on('click', function() {
+                groupBtn.append(newDiv.clone(true).on('click', function() {
                     window.open('https://zalo.com', '_blank');
-                });
+                }));
+            });
 
-                groupBtn.append(newDiv);
-                changes++;
-            }
-        });
-
-        if (changes > 0) {
-            console.log(`Đã thêm ${changes} div mới vào các group button.`);
+            console.log(`Đã thêm ${groupBtns.length} div mới vào các group button.`);
         }
 
         isProcessing = false;
@@ -48,30 +40,36 @@ $(document).ready(function() {
         pageChangeTimeout = setTimeout(function() {
             addDivToGroupBtns();
             pageChangeTimeout = null;
-        }, 1000);
+        }, 300); // Giảm thời gian chờ xuống 300ms
     }
 
     // Xử lý sự kiện click trên thẻ a.page-item
     $(document).on('click', 'a.page-item', function(e) {
-        e.preventDefault(); // Ngăn chặn hành vi mặc định của thẻ a
+        e.preventDefault();
         const href = $(this).attr('href');
     });
 
     // Thêm div ban đầu khi trang được tải
     $(window).on('load', addDivToGroupBtns);
 
-    // Xử lý các thay đổi DOM khác (nếu cần)
+    // Xử lý các thay đổi DOM
     const observer = new MutationObserver(function(mutations) {
+        let shouldHandle = false;
         mutations.forEach(function(mutation) {
             if (mutation.type === 'childList' && !isProcessing) {
-                handlePageChange();
+                shouldHandle = true;
             }
         });
+        if (shouldHandle) {
+            handlePageChange();
+        }
     });
 
     const config = { childList: true, subtree: true };
     observer.observe(document.body, config);
 });
+
+
 
 
 
