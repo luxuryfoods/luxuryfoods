@@ -49,39 +49,10 @@ $(window).on('load', function () {
         }
     }
 
-    // Khởi tạo MutationObserver
-    function initObserver() {
-        observer = new MutationObserver(function (mutations) {
-            checkCount++; // Tăng biến đếm mỗi khi có sự thay đổi
 
-            // Ngừng theo dõi nếu đã đạt số lần kiểm tra tối đa
-            if (checkCount >= maxChecks) {
-                observer.disconnect(); // Ngừng theo dõi
-                console.log(`Ngừng kiểm tra sau ${maxChecks} lần.`);
-                return;
-            }
-
-            // Gọi hàm để thêm div mới vào group-btn
-            addDivToGroupBtns();
-        });
-    }
 
     // Thêm sự kiện click cho các thẻ a có class 'page-item'
     $('a.page-item').on('click', function (event) {
-        // Đặt lại biến đếm
-        checkCount = 0;
-        
-        // Khởi tạo MutationObserver nếu chưa khởi tạo
-        if (!observer) {
-            initObserver();
-        }
-
-        // Bắt đầu theo dõi sự thay đổi trong DOM
-        const targetNode = document.body; // Hoặc bạn có thể chỉ định một phần tử cụ thể
-        const config = { childList: true, subtree: true }; // Theo dõi các thay đổi con và trong cây con
-        observer.observe(targetNode, config); // Bắt đầu theo dõi
-
-        // Gọi hàm để thêm div mới vào group-btn ngay lập tức
         addDivToGroupBtns();
     });
 });
