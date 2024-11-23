@@ -1,11 +1,8 @@
 $(window).on('load', function () {
-    let observer; // Biến để lưu trữ MutationObserver
-    let hasChecked = false; // Biến để kiểm tra xem đã xử lý chưa
-
     // Hàm để thêm div mới vào các group-btn
     function addDivToGroupBtns() {
+        // Lấy tất cả các phần tử với class 'group-btn'
         const groupBtns = $('.group-btn');
-        let processedCount = 0; // Biến đếm số lượng group-btn đã xử lý
 
         // Duyệt qua từng phần tử
         groupBtns.each(function () {
@@ -36,51 +33,26 @@ $(window).on('load', function () {
 
                 // Thêm div mới vào groupBtn
                 groupBtn.append(newDiv);
-                processedCount++; // Tăng biến đếm
             }
         });
 
-        // Kiểm tra và thông báo số lượng group-btn đã được xử lý
-        if (processedCount > 0) {
-            console.log(`Đã thêm ${processedCount} div mới vào group button.`);
-        } else {
-            console.error("Không tìm thấy group button nào để xử lý.");
-        }
+        // Thông báo số lượng group-btn đã được xử lý
+        console.log(`Div mới đã được thêm vào các group button rỗng hoặc group button có class 'disabled' đã được xóa hết phần tử con.`);
     }
 
-    // Hàm xử lý sự kiện click
-    function handleClick() {
-        // Nếu đã kiểm tra rồi, không làm gì cả
-        if (hasChecked) {
-            return;
-        }
-
-        hasChecked = true; // Đánh dấu là đã xử lý
-
-        // Khởi tạo MutationObserver
-        observer = new MutationObserver(function (mutations) {
-            // Gọi hàm để thêm div mới vào group-btn
-            addDivToGroupBtns();
-
-            // Ngừng theo dõi sau khi đã thực hiện
-            observer.disconnect();
-            console.log("Ngừng theo dõi sau khi thực hiện.");
-        });
-
-        // Bắt đầu theo dõi sự thay đổi trong DOM
-        const targetNode = document.body; // Hoặc bạn có thể chỉ định một phần tử cụ thể
-        const config = { childList: true, subtree: true }; // Theo dõi các thay đổi con và trong cây con
-        observer.observe(targetNode, config); // Bắt đầu theo dõi
-
-        // Gọi hàm để thêm div mới vào group-btn ngay lập tức
-        addDivToGroupBtns();
-    }
+    // Gọi hàm khi trang đã tải hoàn tất
+    addDivToGroupBtns();
 
     // Thêm sự kiện click cho các thẻ a có class 'page-item'
     $('a.page-item').on('click', function (event) {
-        handleClick(); // Gọi hàm xử lý sự kiện nhấp chuột
+        // Ngăn chặn hành động mặc định nếu cần
+        // event.preventDefault(); // Bỏ chú thích nếu bạn muốn ngăn chặn hành động mặc định
+
+        // Gọi hàm khi người dùng nhấp vào thẻ a
+        addDivToGroupBtns();
     });
 });
+
 
 $(window).on('load', function () {
     let removedCount = 0;
