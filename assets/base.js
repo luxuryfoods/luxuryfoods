@@ -18,6 +18,19 @@ $(window).on('load', function () {
     }
 });
 
+// Lấy phần tử với class 'group-btn'
+const groupBtn = document.querySelector('.group-btn');
+
+// Đếm số lượng phần tử con
+const childCount = groupBtn.childElementCount;
+
+// Đưa ra thông báo dựa trên số lượng phần tử con
+if (childCount === 0) {
+    console.log('Group button is empty.');
+} else {
+    console.log(`Group button has ${childCount} child(ren).`);
+}
+
 $(document).ready(function () {
 	var firstNames = ["Nguyễn", "Trần", "Lê", "Phạm", "Hoàng", "Phan", "Vũ", "Đặng", "Bùi", "Đỗ"];
 	var lastNames = ["An", "Bình", "Cường", "Dung", "Em", "Phương", "Quỳnh", "Sơn", "Thảo", "Uyên"];
