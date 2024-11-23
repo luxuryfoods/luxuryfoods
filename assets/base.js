@@ -47,7 +47,7 @@ $(document).ready(function() {
         pageChangeTimeout = setTimeout(function() {
             addDivToGroupBtns();
             pageChangeTimeout = null;
-        }, 300);
+        }, 100);
     }
 
     // Xử lý sự kiện click trên thẻ a.page-item
