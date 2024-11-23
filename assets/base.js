@@ -1,6 +1,6 @@
 $(document).ready(function() {
     let isProcessing = false;
-    let changeDetected = false;
+    let pageChangeTimeout = null;
 
     function addDivToGroupBtns() {
         if (isProcessing) return;
@@ -11,27 +11,25 @@ $(document).ready(function() {
 
         groupBtns.each(function() {
             const groupBtn = $(this);
-            if (groupBtn.children().length === 0 || groupBtn.hasClass('disabled')) {
+            if ((groupBtn.children().length === 0 || groupBtn.hasClass('disabled')) && groupBtn.find('.contact-now').length === 0) {
                 if (groupBtn.hasClass('disabled')) {
                     groupBtn.empty();
                 }
 
-                if (groupBtn.find('.contact-now').length === 0) {
-                    const newDiv = $('<div>', {
-                        class: 'contact-now gst-p-border-color gst-p-background-color--hover text-light--hover svg-light--hover',
-                        'rv-on-click': 'methods.onClickBuyNow | args product'
-                    });
+                const newDiv = $('<div>', {
+                    class: 'contact-now gst-p-border-color gst-p-background-color--hover text-light--hover svg-light--hover',
+                    'rv-on-click': 'methods.onClickBuyNow | args product'
+                });
 
-                    const span = $('<span>').text('Liên hệ ngay');
-                    newDiv.append(span);
+                const span = $('<span>').text('Liên hệ ngay');
+                newDiv.append(span);
 
-                    newDiv.on('click', function() {
-                        window.open('https://zalo.com', '_blank');
-                    });
+                newDiv.on('click', function() {
+                    window.open('https://zalo.com', '_blank');
+                });
 
-                    groupBtn.append(newDiv);
-                    changes++;
-                }
+                groupBtn.append(newDiv);
+                changes++;
             }
         });
 
@@ -40,40 +38,52 @@ $(document).ready(function() {
         }
 
         isProcessing = false;
-        changeDetected = false;
     }
 
-    function handlePageItemClick() {
-        changeDetected = true;
-        checkForChanges();
-    }
-
-    function checkForChanges() {
-        if (changeDetected) {
-            setTimeout(function() {
-                addDivToGroupBtns();
-                if (changeDetected) {
-                    checkForChanges();
-                }
-            }, 500);
+    function handlePageChange() {
+        if (pageChangeTimeout) {
+            clearTimeout(pageChangeTimeout);
         }
+
+        pageChangeTimeout = setTimeout(function() {
+            addDivToGroupBtns();
+            pageChangeTimeout = null;
+        }, 1000);
     }
 
+    // Xử lý sự kiện click trên thẻ a.page-item
+    $(document).on('click', 'a.page-item', function(e) {
+        e.preventDefault(); // Ngăn chặn hành vi mặc định của thẻ a
+        const href = $(this).attr('href');
+        
+        // Thực hiện chuyển trang bằng AJAX hoặc cập nhật nội dung
+        $.ajax({
+            url: href,
+            success: function(response) {
+                // Cập nhật nội dung trang (giả định)
+                $('#content').html(response);
+                handlePageChange();
+            }
+        });
+    });
+
+    // Thêm div ban đầu khi trang được tải
     $(window).on('load', addDivToGroupBtns);
 
-    $(document).on('click', 'a.page-item', handlePageItemClick);
-
-    // Theo dõi thay đổi DOM
+    // Xử lý các thay đổi DOM khác (nếu cần)
     const observer = new MutationObserver(function(mutations) {
-        if (!isProcessing && !changeDetected) {
-            changeDetected = true;
-            checkForChanges();
-        }
+        mutations.forEach(function(mutation) {
+            if (mutation.type === 'childList' && !isProcessing) {
+                handlePageChange();
+            }
+        });
     });
 
     const config = { childList: true, subtree: true };
     observer.observe(document.body, config);
 });
+
+
 
 
 
