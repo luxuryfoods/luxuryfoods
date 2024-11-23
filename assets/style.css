@@ -229,7 +229,7 @@ section#news-2 {
 	margin-bottom: .5rem;
 }
 .shopping-cart .contact-now {
-	margin-right: 0;
+	margin-right: 0 !important;;
 }
 /* Introduction Banner */
 .introduction-4__wrapper {
