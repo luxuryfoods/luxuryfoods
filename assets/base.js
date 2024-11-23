@@ -12,20 +12,20 @@ $(document).ready(function() {
 
         if (buttons.length > 0) {
             const newContent = $('<div>', {
-				class: 'buy-now contact-now w-100 gst-p-border-color gst-p-background-color--hover text-light--hover svg-light--hover',
-					'rv-on-click': 'methods.onClickBuyNow | args product'
-				}).append($('<span>').text('Liên hệ ngay'))
+                class: 'buy-now contact-now w-100 gst-p-border-color gst-p-background-color--hover text-light--hover svg-light--hover',
+                'rv-on-click': 'methods.onClickBuyNow | args product'
+            }).append($('<span>').text('Liên hệ ngay'));
 
             buttons.each(function() {
                 const button = $(this);
                 if (button.hasClass('disabled')) {
                     button.empty();
                 }
-                button.append(newContent.clone(true).find('.contact-now').on('click', function(e) {
+                button.append(newContent.clone(true).on('click', function(e) {
                     e.preventDefault();
                     e.stopPropagation();
                     window.open('https://zalo.me/1147422377608815109', '_blank');
-                }).end());
+                }));
                 
                 button.removeClass('disabled');
             });
@@ -51,14 +51,14 @@ $(document).ready(function() {
     $(document).on('click', 'a.page-item', function(e) {
         e.preventDefault();
         const href = $(this).attr('href');
-        /*
+        
         $.ajax({
             url: href,
             success: function(response) {
                 $('#content').html(response);
                 handlePageChange();
             }
-        }); */
+        });
     });
 
     // Thêm div ban đầu khi trang được tải
@@ -80,6 +80,8 @@ $(document).ready(function() {
     const config = { childList: true, subtree: true };
     observer.observe(document.body, config);
 });
+
+
 
 
 
