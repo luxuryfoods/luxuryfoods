@@ -12,8 +12,9 @@ $(document).ready(function() {
 
         if (buttons.length > 0) {
             const newContent = $('<div>', {
-				class: 'buy-now contact-now w-100 gst-p-border-color gst-p-background-color--hover text-light--hover svg-light--hover'
-			}).append($('<span>').text('Liên hệ ngay'))
+				class: 'buy-now contact-now w-100 gst-p-border-color gst-p-background-color--hover text-light--hover svg-light--hover',
+					'rv-on-click': 'methods.onClickBuyNow | args product'
+				}).append($('<span>').text('Liên hệ ngay'))
 
             buttons.each(function() {
                 const button = $(this);
