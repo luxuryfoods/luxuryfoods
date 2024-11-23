@@ -55,16 +55,6 @@ $(document).ready(function() {
     $(document).on('click', 'a.page-item', function(e) {
         e.preventDefault(); // Ngăn chặn hành vi mặc định của thẻ a
         const href = $(this).attr('href');
-        
-        // Thực hiện chuyển trang bằng AJAX hoặc cập nhật nội dung
-        $.ajax({
-            url: href,
-            success: function(response) {
-                // Cập nhật nội dung trang (giả định)
-                $('#content').html(response);
-                handlePageChange();
-            }
-        });
     });
 
     // Thêm div ban đầu khi trang được tải
