@@ -11,19 +11,20 @@ $(document).ready(function() {
         });
 
         if (buttons.length > 0) {
+			
             const newContent = $('<div>', { class: 'w-100' }).append(
                 $('<div>', { class: 'd-flex justify-content-around mb-2' }).append(
                     $('<div>', {
-                        class: 'contact-now gst-p-border-color gst-p-background-color--hover text-light--hover svg-light--hover',
+                        class: 'buy-now w-100 contact-now gst-p-border-color gst-p-background-color--hover text-light--hover svg-light--hover',
                         'rv-on-click': 'methods.onClickBuyNow | args product'
                     }).append(
                         $('<img>', {
-                            src: 'https://luxuryfoods.github.io/luxuryfoods/assets/phone-call.svg', // Đường dẫn đến hình ảnh
-                            alt: 'Hình ảnh liên hệ ngay', // Văn bản thay thế cho hình ảnh
-                            class: 'contact-image', // Thêm class nếu cần
-                            style: 'width: 20px; height: auto; margin-right: 5px;' // Style cho hình ảnh
+                            src: 'https://luxuryfoods.github.io/luxuryfoods/assets/phone-call.svg',
+                            alt: 'Liên hệ ngay',
+                            class: 'contact-icon',
+                            style: 'width: 18px; height: auto; margin-right: 5px;'
                         }),
-                        $('<span>').text('Liên hệ ngay') // Thêm span sau hình ảnh
+                        $('<span>').text('Liên hệ ngay')
                     )
                 )
             );
