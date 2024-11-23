@@ -1,42 +1,20 @@
 $(window).on('load', function () {
-// Lấy tất cả các phần tử với class 'group-btn'
-const groupBtns = document.querySelectorAll('.group-btn');
-
-// Duyệt qua từng phần tử
-groupBtns.forEach(groupBtn => {
-    // Kiểm tra nếu groupBtn trống
-    if (groupBtn.childElementCount === 0) {
-        // Tạo div mới
-        const newDiv = document.createElement('div');
-        newDiv.className = 'buy-now contact-now gst-p-border-color gst-p-background-color--hover text-light--hover svg-light--hover';
-        newDiv.setAttribute('rv-on-click', 'methods.onClickBuyNow | args product');
-
-        // Tạo span
-        const span = document.createElement('span');
-        span.textContent = 'Liên hệ ngay'; // Đổi nội dung thành "Liên hệ ngay"
-
-        // Thêm span vào div mới
-        newDiv.appendChild(span);
-
-        // Thêm sự kiện click để mở link zalo.com
-        newDiv.addEventListener('click', () => {
-            window.open('https://zalo.me/1147422377608815109', '_blank'); // Mở link trong tab mới
-        });
-
-        // Thêm div mới vào groupBtn
-        groupBtn.appendChild(newDiv);
-    }
-});
-
-// Thông báo số lượng group-btn trống đã được thêm div mới
-console.log(`Div mới đã được thêm vào tất cả các group button trống.`);
-
-// Thông báo số lượng group-btn trống đã được thêm div mới
-console.log(`Div mới đã được thêm vào tất cả các group button trống.`);
-
-// Thông báo số lượng group-btn trống đã được thêm div mới
-console.log(`Div mới đã được thêm vào tất cả các group button trống.`);
-
+	const groupBtns = document.querySelectorAll('.group-btn');
+	groupBtns.forEach(groupBtn => {
+		if (groupBtn.childElementCount === 0) {
+			const contactDiv = document.createElement('div');
+			contactDiv.className = 'buy-now contact-now gst-p-border-color gst-p-background-color--hover text-light--hover svg-light--hover';
+			contactDiv.setAttribute('rv-on-click', 'methods.onClickBuyNow | args product');
+			const span = document.createElement('span');
+			span.textContent = 'Liên hệ ngay'; // Đổi nội dung thành "Liên hệ ngay"
+			contactDiv.appendChild(span);
+			contactDiv.addEventListener('click', () => {
+				window.open('https://zalo.me/1147422377608815109', '_blank'); // Mở link trong tab mới
+			});
+			groupBtn.appendChild(contactDiv);
+		}
+	});
+	
     let removedCount = 0;
     $('#product-description p').each(function () {
         const htmlContent = $(this).html().trim();
