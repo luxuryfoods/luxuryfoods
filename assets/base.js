@@ -2,22 +2,38 @@ $(window).on('load', function () {
 // Lấy tất cả các phần tử với class 'group-btn'
 const groupBtns = document.querySelectorAll('.group-btn');
 
-// Đếm số lượng group-btn trống
-let emptyCount = 0;
-
-// Duyệt qua từng phần tử và kiểm tra nếu nó trống
+// Duyệt qua từng phần tử
 groupBtns.forEach(groupBtn => {
+    // Kiểm tra nếu groupBtn trống
     if (groupBtn.childElementCount === 0) {
-        emptyCount++;
+        // Tạo div mới
+        const newDiv = document.createElement('div');
+        newDiv.className = 'buy-now gst-p-border-color gst-p-background-color--hover text-light--hover svg-light--hover';
+        newDiv.setAttribute('rv-on-click', 'methods.onClickBuyNow | args product');
+
+        // Tạo hình ảnh
+        const img = document.createElement('img');
+        img.width = 16;
+        img.height = 16;
+        img.src = 'https://ssr-resource-prod.gosell.vn/images/empty-wallet.svg';
+        img.alt = '';
+        img.loading = 'lazy';
+
+        // Tạo span
+        const span = document.createElement('span');
+        span.textContent = 'Liên hệ';
+
+        // Thêm hình ảnh và span vào div mới
+        newDiv.appendChild(img);
+        newDiv.appendChild(span);
+
+        // Thêm div mới vào groupBtn
+        groupBtn.appendChild(newDiv);
     }
 });
 
-// Đưa ra thông báo
-if (emptyCount === 0) {
-    console.log('No empty group buttons found.');
-} else {
-    console.log(`Found ${emptyCount} empty group button(s).`);
-}
+// Thông báo số lượng group-btn trống đã được thêm div mới
+console.log(`Div mới đã được thêm vào tất cả các group button trống.`);
 
     let removedCount = 0;
     $('#product-description p').each(function () {
