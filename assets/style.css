@@ -421,6 +421,22 @@ section#news-2 {
 	-o-object-fit: cover;
 	object-fit: cover;
 }
+@media (max-width: 576px) {
+#product-detail #product-review.product-review .bg-white {
+	padding: 0 5px;
+}
+#product-review.product-review .item-information #product-description {
+	padding: 30px 12px !important;
+}
+}
+
+ul, ol {
+	padding-left: 20px;
+}
+p:has(+ ul), p:has(+ ol) {
+	margin-bottom: 6px !important;
+}
+
 .fr-img-caption .fr-inner {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
