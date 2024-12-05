@@ -8,6 +8,12 @@
 body {
 	font-size: 16px;
 }
+ul, ol {
+	padding-left: 1rem;
+}
+p:has(+ ul), p:has(+ ol) {
+	margin-bottom: 6px !important;
+}
 .display-video-style .container-video,
 div.cp-contact-us-1, .container,
 div.container-fluid,
@@ -429,14 +435,6 @@ section#news-2 {
 	padding: 30px 12px !important;
 }
 }
-
-ul, ol {
-	padding-left: 20px;
-}
-p:has(+ ul), p:has(+ ol) {
-	margin-bottom: 6px !important;
-}
-
 .fr-img-caption .fr-inner {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
