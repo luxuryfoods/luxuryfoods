@@ -502,6 +502,10 @@ body .article-element .article-element__breadcrumbs :is(span, a) {
 	opacity: .8;
 }
 .product-review h2,  .article-element h2 {
+	font-size: clamp(24px, 2vw, 32px);
+	margin-bottom: 12px;
+}
+.product-review h3,  .article-element h3 {
 	font-size: clamp(22px, 2vw, 28px);
 	margin-bottom: 12px;
 }
