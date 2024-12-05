@@ -488,6 +488,13 @@ section.container-fluid.article-element {
 #product-description p, #product-description ul li,#product-description ol li {
 	font-size: 18px;
 }
+body .article-element .article-element__breadcrumbs {
+    margin-bottom: 0;
+    font-weight: 400;
+}
+body .article-element .article-element__breadcrumbs :is(span, a) {
+	opacity: .7;
+}
 /* Sidebar */
 .article-element .latest-article-container img {
     width: 35%;
