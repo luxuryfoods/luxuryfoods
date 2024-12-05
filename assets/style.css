@@ -22,10 +22,6 @@ section.container-fluid {
 	padding-left: 12px;
 	padding-right: 12px;
 }
-section.container-fluid.article-element {
-	padding-left: 0;
-	padding-right: 0;
-}
 .hover-indicator {
   border-bottom: 2px solid transparent
 }
@@ -484,6 +480,10 @@ section#news-2 {
     display: none !important;
 }
 /* Article Page */
+section.container-fluid.article-element {
+	padding-left: 4px;
+	padding-right: 4px;
+}
 .article-element p, .article-element ul li, .article-element ol li,
 #product-description p, #product-description ul li,#product-description ol li {
 	font-size: 18px;
