@@ -482,6 +482,7 @@ section#news-2 {
 #news-1 .row .news-item .caption .caption-title {
 	font-size: 16px !important;
 }
+section[cp="free-html-1"],
 #news-1 .featured-text {
     display: none !important;
 }
