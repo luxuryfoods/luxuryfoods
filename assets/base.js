@@ -127,9 +127,9 @@ $(document).ready(function () {
 		{ name: "Đầu thăn ngoại bò Mỹ ", image: "https://p16-oec-va.ibyteimg.com/tos-maliva-i-o3syd03w52-us/4116cb89c9a5467b80067fbfbf31eec8~tplv-o3syd03w52-origin-jpeg.jpeg", link: "https://luxuryfoods.vn/product/dau-than-ngoai-bo-my-certified-angus-beef-1kg-p1126177" },
 		{ name: "Bào ngư viền xanh Tacmania", image: "https://d3a0f2zusjbf7r.cloudfront.net/532/c39dd245-26c1-4fdd-bcb0-32fd27d83115.png", link: "https://luxuryfoods.vn/product/bao-ngu-uc-vien-xanh-tasmania-1kg-p1169288" },
 		{ name: "Bắp bò Úc", image: "https://d3a0f2zusjbf7r.cloudfront.net/360/158472d2-89b2-4257-94fe-f25c3cf00cf2.png", link: "https://luxuryfoods.vn/product/bap-bo-uc-1kg-p1127706" },
-		{ name: "SET COLD CUT BASIC", image: "https://d3a0f2zusjbf7r.cloudfront.net/400/39dd4f54-a6d3-4d9d-88e1-e3c8807327d5.jpg", link: "https://luxuryfoods.vn/product/set-cold-cut-basic-khay-thit-nguoi-co-ban-p1707830" },
-		{ name: "SET COLD CUT PREMIUM", image: "https://d3a0f2zusjbf7r.cloudfront.net/400/b223ceb7-bcb2-413c-b85c-d3926a73dbeb.jpg", link: "https://luxuryfoods.vn/product/set-cold-cut-premium-khay-thit-nguoi-cao-cap-p1707831" },
-		{ name: "SET COLD CUT DELUXE", image: "https://d3a0f2zusjbf7r.cloudfront.net/532/4cf051b3-727f-4f56-b461-19cdbb5e43bd.png", link: "https://luxuryfoods.vn/product/set-cold-cut-deluxe-khay-thit-nguoi-tong-hop-thuong-hang-p1707832" }
+		{ name: "Cold Cuts & Cheese – Basic Set", image: "https://d3a0f2zusjbf7r.cloudfront.net/400/39dd4f54-a6d3-4d9d-88e1-e3c8807327d5.jpg", link: "https://luxuryfoods.vn/product/cold-cuts-cheese-basic-set-p1707830" },
+		{ name: "Cold Cuts & Cheese – Delux Set", image: "https://d3a0f2zusjbf7r.cloudfront.net/400/b223ceb7-bcb2-413c-b85c-d3926a73dbeb.jpg", link: "https://luxuryfoods.vn/product/cold-cuts-cheese-delux-set-p1707831" },
+		{ name: "Cold Cuts & Cheese – Premium Set", image: "https://d3a0f2zusjbf7r.cloudfront.net/532/4cf051b3-727f-4f56-b461-19cdbb5e43bd.png", link: "https://luxuryfoods.vn/product/cold-cuts-cheese-premium-set-p1707832" }
 
 	];
 
