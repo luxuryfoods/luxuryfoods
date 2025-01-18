@@ -600,26 +600,26 @@ section .blog-article-1 .box-cate {
 }
 
 /* Popup Modal */
-.modal-content {
+#locationPopup .modal-content {
   background: linear-gradient(135deg, #8b0000 0%, #660000 100%);
   color: white;
   border: none;
   border-radius: 8px;
 }
-.btn-close {
+.close {
   position: absolute;
   right: 12px;
   top: 12px;
   filter: brightness(0) invert(1);
   opacity: 0.8;
 }
-.btn-close:hover {
+.close:hover {
   opacity: 1;
   filter: brightness(0) invert(1);
 }
-.logo-container {
-  width: 80px;
-  height: 80px;
+#locationPopup .logo-container {
+  width: 90px;
+  height: 90px;
   margin: 0 auto;
   background: rgba(255, 255, 255, 0.1);
   border-radius: 50%;
@@ -627,21 +627,21 @@ section .blog-article-1 .box-cate {
   align-items: center;
   justify-content: center;
 }
-.logo-container img {
-  width: 50px;
-  height: 50px;
+#locationPopup .logo-container img {
+  width: 80px;
+  height: 80px;
   filter: brightness(0) invert(1);
 }
-.subtitle {
+#locationPopup .subtitle {
   font-size: 14px;
   opacity: 0.8;
 }
-.button-group {
+#locationPopup .button-group {
   display: flex;
   justify-content: center;
   gap: 15px;
 }
-.btn-location {
+#locationPopup .btn-location {
   background-color: rgba(255, 255, 255, 0.1);
   color: white;
   border: 1px solid rgba(255, 255, 255, 0.2);
@@ -651,16 +651,16 @@ section .blog-article-1 .box-cate {
   flex: 0 1 auto;
   min-width: 140px;
 }
-.btn-location:hover {
+#locationPopup .btn-location:hover {
   background-color: rgba(255, 255, 255, 0.2);
   color: white;
   border-color: rgba(255, 255, 255, 0.3);
 }
-.modal-body h2 {
+#locationPopup .modal-body h2 {
   font-size: 24px;
   font-weight: 500;
 }
-.thank-you-text {
+#locationPopup .thank-you-text {
   font-size: 13px;
   opacity: 0.7;
   margin-bottom: 0;
