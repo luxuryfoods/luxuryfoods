@@ -606,20 +606,20 @@ section .blog-article-1 .box-cate {
   border: none;
   border-radius: 8px;
 }
-.close {
+#locationPopup .close {
   position: absolute;
   right: 12px;
   top: 12px;
   filter: brightness(0) invert(1);
   opacity: 0.8;
 }
-.close:hover {
+#locationPopup .close:hover {
   opacity: 1;
   filter: brightness(0) invert(1);
 }
 #locationPopup .logo-container {
-  width: 90px;
-  height: 90px;
+  width: 100px;
+  height: 100px;
   margin: 0 auto;
   background: rgba(255, 255, 255, 0.1);
   border-radius: 50%;
@@ -628,8 +628,8 @@ section .blog-article-1 .box-cate {
   justify-content: center;
 }
 #locationPopup .logo-container img {
-  width: 80px;
-  height: 80px;
+  width: 90px;
+  height: 90px;
   filter: brightness(0) invert(1);
 }
 #locationPopup .subtitle {
