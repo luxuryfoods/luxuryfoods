@@ -131,8 +131,8 @@ $(document).ready(function() {
         $(`#${POPUP_ID}`).modal('hide');
         console.log(`Đã chọn Thanh Hóa từ popup ${POPUP_ID}`);
     });
-    $(`#${POPUP_ID}-huyenKhac`).click(function() {
-        Cookies.set(`${POPUP_ID}-choice`, 'other', { expires: 30 });
+    $(`#${POPUP_ID}-other`).click(function() {
+        Cookies.set(`${POPUP_ID}-choice`, 'TinhThanhKhac', { expires: 30 });
         $(`#${POPUP_ID}`).modal('hide');
         console.log(`Đã chọn Tỉnh Thành khác từ popup ${POPUP_ID}`);
     });
