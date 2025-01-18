@@ -117,7 +117,10 @@ $(document).ready(function() {
     
     function showPopup() {
         if (!Cookies.get(`${POPUP_ID}-choice`)) {
-            $(`#${POPUP_ID}`).modal('show');
+            $(`#${POPUP_ID}`).modal({
+                backdrop: 'static',
+                keyboard: false
+            });
         }
     }
     // Hiển thị popup sau 5 giây
