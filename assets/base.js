@@ -117,7 +117,10 @@ $(document).ready(function() {
     
     function showPopup() {
         if (!Cookies.get(`${POPUP_ID}-choice`)) {
-            $(`#${POPUP_ID}`).modal('show');
+            $(`#${POPUP_ID}`).modal({
+                backdrop: 'static',
+                keyboard: false
+            });
         }
     }
     // Hiển thị popup sau 5 giây
@@ -138,6 +141,7 @@ $(document).ready(function() {
         Cookies.set(`${POPUP_ID}-choice`, 'closed', { 
             expires: new Date(new Date().getTime() + 24 * 60 * 60 * 1000)
         });
+        $(`#${POPUP_ID}`).modal('hide');
         console.log(`Đã đóng popup ${POPUP_ID}`);
     });
 });
