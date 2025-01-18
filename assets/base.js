@@ -114,11 +114,15 @@ $(window).on('load', function () {
 // Popup khu vực
 $(document).ready(function() {
     const POPUP_ID = 'locationPopup';
-
-    // Kiểm tra cookie khi trang tải
-    if (!Cookies.get(`${POPUP_ID}-choice`)) {
-        $(`#${POPUP_ID}`).modal('show');
+    
+    function showPopup() {
+        if (!Cookies.get(`${POPUP_ID}-choice`)) {
+            $(`#${POPUP_ID}`).modal('show');
+        }
     }
+    // Hiển thị popup sau 5 giây
+    setTimeout(showPopup, 5000);
+	
     $(`#${POPUP_ID}-thanhHoa`).click(function() {
         Cookies.set(`${POPUP_ID}-choice`, 'ThanhHoa', { expires: 30 });
         $(`#${POPUP_ID}`).modal('hide');
