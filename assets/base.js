@@ -132,9 +132,9 @@ $(document).ready(function() {
         console.log(`Đã chọn Thanh Hóa từ popup ${POPUP_ID}`);
     });
     $(`#${POPUP_ID}-huyenKhac`).click(function() {
-        Cookies.set(`${POPUP_ID}-choice`, 'HuyenKhac', { expires: 30 });
+        Cookies.set(`${POPUP_ID}-choice`, 'other', { expires: 30 });
         $(`#${POPUP_ID}`).modal('hide');
-        console.log(`Đã chọn Huyện khác từ popup ${POPUP_ID}`);
+        console.log(`Đã chọn Tỉnh Thành khác từ popup ${POPUP_ID}`);
     });
     $(`#${POPUP_ID}-close`).click(function() {
         // Đặt cookie với thời hạn 24 giờ (1 ngày)
