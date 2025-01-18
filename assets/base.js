@@ -111,6 +111,32 @@ $(window).on('load', function () {
         console.log('Không có thẻ <p> nào bị xóa.');
     }
 });
+// Popup khu vực
+$(document).ready(function() {
+    const POPUP_ID = 'locationPopup';
+
+    // Kiểm tra cookie khi trang tải
+    if (!Cookies.get(`${POPUP_ID}-choice`)) {
+        $(`#${POPUP_ID}`).modal('show');
+    }
+    $(`#${POPUP_ID}-thanhHoa`).click(function() {
+        Cookies.set(`${POPUP_ID}-choice`, 'ThanhHoa', { expires: 30 });
+        $(`#${POPUP_ID}`).modal('hide');
+        console.log(`Đã chọn Thanh Hóa từ popup ${POPUP_ID}`);
+    });
+    $(`#${POPUP_ID}-huyenKhac`).click(function() {
+        Cookies.set(`${POPUP_ID}-choice`, 'HuyenKhac', { expires: 30 });
+        $(`#${POPUP_ID}`).modal('hide');
+        console.log(`Đã chọn Huyện khác từ popup ${POPUP_ID}`);
+    });
+    $(`#${POPUP_ID}-close`).click(function() {
+        // Đặt cookie với thời hạn 24 giờ (1 ngày)
+        Cookies.set(`${POPUP_ID}-choice`, 'closed', { 
+            expires: new Date(new Date().getTime() + 24 * 60 * 60 * 1000)
+        });
+        console.log(`Đã đóng popup ${POPUP_ID}`);
+    });
+});
 
 $(document).ready(function () {
 	var firstNames = ["Nguyễn", "Trần", "Lê", "Phạm", "Hoàng", "Phan", "Vũ", "Đặng", "Bùi", "Đỗ"];
