@@ -153,9 +153,9 @@ $(document).ready(function () {
 	var addresses = ["Hà Nội", "Đông Sơn", "Ninh Bình", "Thanh Hóa", "Hoằng Hóa", "Nghi Sơn", "Sầm Sơn", "Nghệ An", "Thọ Xuân", "TP. Thanh Hóa"];
 	var times = ["1 phút", "3 phút", "5 phút", "10 phút", "16 phút", "1 giờ", "2 giờ", "3 giờ", "22 phút", "35 phút"];
 	var products = [
-		{ name: "Thịt Bò Mỹ", image: "https://d3a0f2zusjbf7r.cloudfront.net/400/f14e5fdb-24cc-4483-9b36-6e53e0d7a81f.png", link: "https://luxuryfoods.vn/vi/collection/product/thit-bo-my-c40128?collectionPage=%5B1%5D" },
-		{ name: "Thịt Bò Úc", image: "https://d3a0f2zusjbf7r.cloudfront.net/400/ff5e00b1-aa8f-4171-93d4-462d0a376960.png", link: "https://luxuryfoods.vn/vi/collection/product/thit-bo-uc-c40133?collectionPage=%5B1%5D" },
-		{ name: "Bơ, sữa chua, phô mai", image: "https://p16-oec-va.ibyteimg.com/tos-maliva-i-o3syd03w52-us/ad48761b4ed942a2962982ffcee1dd25~tplv-o3syd03w52-origin-jpeg.jpeg", link: "https://luxuryfoods.vn/vi/collection/product/bo-sua-va-pho-mai-c39868?collectionPage=%5B1%5D" },
+		{ name: "Thịt Bò Mỹ", image: "https://d3a0f2zusjbf7r.cloudfront.net/400/f14e5fdb-24cc-4483-9b36-6e53e0d7a81f.png", link: "https://luxuryfoods.vn/vi/collection/product/thit-bo-my-c49887" },
+		{ name: "Thịt Bò Úc", image: "https://d3a0f2zusjbf7r.cloudfront.net/400/ff5e00b1-aa8f-4171-93d4-462d0a376960.png", link: "https://luxuryfoods.vn/vi/collection/product/thit-bo-uc-c49888" },
+		{ name: "Bơ, sữa chua, phô mai", image: "https://p16-oec-va.ibyteimg.com/tos-maliva-i-o3syd03w52-us/ad48761b4ed942a2962982ffcee1dd25~tplv-o3syd03w52-origin-jpeg.jpeg", link: "https://luxuryfoods.vn/collection/product/bo-sua-va-pho-mai-c49902" },
 		{ name: "Trứng Cá Hồi Nauy", image: "https://d3a0f2zusjbf7r.cloudfront.net/400/f1c49365-3c3d-480c-8b76-1c7f4fa9e805.png", link: "https://luxuryfoods.vn/product/trung-ca-hoi-nauy-p1123808" },
 		{ name: "Ruốc Cá Hồi Nauy", image: "https://d3a0f2zusjbf7r.cloudfront.net/532/ac7bf7bb-9728-47f5-b8b6-fda11935186d.jpg", link: "https://luxuryfoods.vn/product/ruoc-ca-hoi-nauy-p1687931" },
 		{ name: "Đầu thăn ngoại bò Mỹ ", image: "https://p16-oec-va.ibyteimg.com/tos-maliva-i-o3syd03w52-us/4116cb89c9a5467b80067fbfbf31eec8~tplv-o3syd03w52-origin-jpeg.jpeg", link: "https://luxuryfoods.vn/product/dau-than-ngoai-bo-my-certified-angus-beef-1kg-p1126177" },
@@ -163,7 +163,7 @@ $(document).ready(function () {
 		{ name: "Bắp bò Úc", image: "https://d3a0f2zusjbf7r.cloudfront.net/360/158472d2-89b2-4257-94fe-f25c3cf00cf2.png", link: "https://luxuryfoods.vn/product/bap-bo-uc-1kg-p1127706" },
 		{ name: "Cold Cuts & Cheese – Basic Set", image: "https://d3a0f2zusjbf7r.cloudfront.net/400/39dd4f54-a6d3-4d9d-88e1-e3c8807327d5.jpg", link: "https://luxuryfoods.vn/product/cold-cuts-cheese-basic-set-p1707830" },
 		{ name: "Cold Cuts & Cheese – Delux Set", image: "https://d3a0f2zusjbf7r.cloudfront.net/400/b223ceb7-bcb2-413c-b85c-d3926a73dbeb.jpg", link: "https://luxuryfoods.vn/product/cold-cuts-cheese-delux-set-p1707831" },
-		{ name: "Cold Cuts & Cheese – Premium Set", image: "https://d3a0f2zusjbf7r.cloudfront.net/532/4cf051b3-727f-4f56-b461-19cdbb5e43bd.png", link: "https://luxuryfoods.vn/product/cold-cuts-cheese-premium-set-p1707832" }
+		{ name: "Lươn Nướng Nhật Bản", image: "https://d3a0f2zusjbf7r.cloudfront.net/532/35fc358d-cb0f-4554-9287-af42308a271b.png", link: "https://luxuryfoods.vn/product/luon-nuong-nhat-ban-nha-luxuryfoods-p1707844" }
 
 	];
 
