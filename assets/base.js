@@ -127,12 +127,12 @@ $(document).ready(function() {
     setTimeout(showPopup, 5000);
 	
     $(`#${POPUP_ID}-thanhHoa`).click(function() {
-        Cookies.set(`${POPUP_ID}-choice`, 'ThanhHoa', { expires: 30 });
+        Cookies.set(`${POPUP_ID}-choice`, 'ThanhHoa', { expires: 10 });
         $(`#${POPUP_ID}`).modal('hide');
         console.log(`Đã chọn Thanh Hóa từ popup ${POPUP_ID}`);
     });
     $(`#${POPUP_ID}-other`).click(function() {
-        Cookies.set(`${POPUP_ID}-choice`, 'TinhThanhKhac', { expires: 30 });
+        Cookies.set(`${POPUP_ID}-choice`, 'TinhThanhKhac', { expires: 10 });
         $(`#${POPUP_ID}`).modal('hide');
         console.log(`Đã chọn Tỉnh Thành khác từ popup ${POPUP_ID}`);
     });
